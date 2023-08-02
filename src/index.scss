@@ -1,0 +1,24 @@
+@import "scss/variables.scss";
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../public/fonts/BebasNeue.ttf");
+}
+
+* {
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  font-family: "BebasNeue";
+}
+
+div {
+  display: block;
+}
+
+body {
+  font-family: "BebasNeue";
+  widows: 100%;
+  margin: 0;
+}

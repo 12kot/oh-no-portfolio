@@ -1,0 +1,66 @@
+:root {
+  --banner-bg-c: rgb(2, 24, 38);
+  --banner-font-c: rgb(2, 24, 38);
+  --banner-font-bd: 1px rgb(54, 76, 90);
+
+  --banner-heigth: 300px;
+
+  --banner-font-size: 90px;
+  --banner-line-height: 69px;
+  --banner-letter-spacing: 2px;
+
+  --banner-text-rotate: -45deg;
+  --banner-dino-rotate: -13deg;
+
+  --banner-dino-heigth: 60%;
+
+  //нетбуки
+  @media screen and (max-width: 1280px) {
+    --banner-heigth: 300px;
+
+    --banner-font-size: 85px;
+    --banner-line-height: 65px;
+
+    --banner-dino-heigth: 55%;
+  }
+
+  //планшеты
+  @media screen and (max-width: 1024px) {
+    --banner-heigth: 300px;
+
+    --banner-font-size: 80px;
+    --banner-line-height: 62px;
+
+    --banner-dino-heigth: 50%;
+  }
+
+  //огромные телефоны
+  @media screen and (max-width: 768px) {
+    --banner-heigth: 300px;
+
+    --banner-font-size: 70px;
+    --banner-line-height: 55px;
+
+    --banner-dino-heigth: 55%;
+  }
+
+  //телефоны
+  @media screen and (max-width: 480px) {
+    --banner-heigth: 300px;
+
+    --banner-font-size: 60px;
+    --banner-line-height: 48px;
+
+    --banner-dino-heigth: 45%;
+  }
+
+  //милипиздрики
+  @media screen and (max-width: 320px) {
+    --banner-heigth: 300px;
+
+    --banner-font-size: 50px;
+    --banner-line-height: 41px;
+
+    --banner-dino-heigth: 45%;
+  }
+}

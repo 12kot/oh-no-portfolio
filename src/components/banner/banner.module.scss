@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+
+  height: var(--banner-heigth);
+  width: 100%;
+
+  overflow: hidden;
+  background-color: var(--banner-bg-c);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .text {
+    position: absolute;
+    width: 150%;
+    transform: rotate(var(--banner-text-rotate));
+    word-break: break-word;
+
+    color: var(--banner-font-c);
+    -webkit-text-stroke: var(--banner-font-bd);
+    text-stroke: var(--banner-font-bd);
+
+    line-height: var(--banner-line-height);
+    letter-spacing: var(--banner-letter-spacing);
+    font-size: var(--banner-font-size);
+  }
+
+  .img {
+    z-index: 100;
+    height: var(--banner-dino-heigth);
+
+    transform: rotate(var(--banner-dino-rotate));
+  }
+}
