@@ -1,8 +1,37 @@
 :root {
+  //COMMON
+  --focus-color: rgba(168, 153, 195, 0.4);
+  --bg-color: #4e4263;
+  --header-bg: #685d7f;
+
+  --element-color: #bba9de;
+  --element-focus: #af99d8;
+
+  --font-color: #ffffff;
+  --font-family: "Montserrat-Regular";
+
+  //BANNER
   --banner-bg-c: rgb(2, 24, 38);
   --banner-font-c: rgb(2, 24, 38);
   --banner-font-bd: 1px rgb(54, 76, 90);
 
+  //COMMON
+  --font-size: 1rem;
+
+  --pad-item-top: 10px;
+  --pad-item-left: 14px;
+  --pad-page-top: 2vh;
+  --pad-page-left: 8vw;
+
+  --border-radius: 8px;
+
+  --gap: 8px;
+  --transition: 0.3s;
+
+  //HEADER
+  --header-heigth: 65px;
+
+  //BANNER
   --banner-heigth: 300px;
 
   --banner-font-size: 90px;
@@ -13,6 +42,8 @@
   --banner-dino-rotate: -13deg;
 
   --banner-dino-heigth: 60%;
+
+  --banner-font-family: "BebasNeue";
 
   //нетбуки
   @media screen and (max-width: 1280px) {
