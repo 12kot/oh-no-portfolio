@@ -29,6 +29,7 @@
         gap: var(--gap);
 
         a {
+          font-weight: bold;
           padding: var(--pad-item-top) var(--pad-item-left);
         }
       }
@@ -41,5 +42,5 @@
 }
 
 .active {
-  background-color: var(--header-bg);
+  background: var(--header-bg);
 }
