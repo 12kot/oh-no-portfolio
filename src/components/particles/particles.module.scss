@@ -1,0 +1,46 @@
+.particle_container {
+    position: absolute ;
+    width: 100%;
+    height: 100vh;
+    
+    overflow: hidden;
+    
+    z-index: 1;
+}
+
+@for $i from 1 through 30 {
+  @keyframes particle-animation-#{$i} {
+    100% {
+      transform: translate3d(
+        (random(10) + vw),
+        (random(90) + vh),
+        (random(100) + px)
+      );
+    }
+  }
+
+  .particle:nth-child(#{$i}) {
+    animation: particle-animation-#{$i} 60s infinite;
+    $size: random(40) + 20px;
+    opacity: 0.1;
+    height: $size;
+    animation-delay: -$i * 0.2s;
+
+    transform: translate3d(
+      (random(10) + vw),
+      (random(90) + vh),
+      (random(100) + px)
+    );
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+    transition: var(--transition);
+
+    &:hover {
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}

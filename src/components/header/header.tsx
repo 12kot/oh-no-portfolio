@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./header.module.scss";
 import dino from "../../img/dino.webp";
 
@@ -14,7 +14,9 @@ const Header = () => {
 
   return (
     <header className={`${styles.container} ${bgActive && styles.active}`}>
-      <img className={styles.dino} src={dino} alt="LOGO" height={"70%"}></img>
+      <a href="#" className={styles.dino}>
+        <img src={dino} alt="LOGO" height={"100%"}></img>
+      </a>
 
       <section className={styles.menu}>
         <nav className={styles.nav}>

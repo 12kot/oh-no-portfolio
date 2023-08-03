@@ -15,6 +15,7 @@
 
   .dino {
     transform: rotate(var(--banner-dino-rotate));
+    height: 70%;
   }
 
   .menu {
@@ -32,6 +33,10 @@
           font-weight: bold;
           padding: var(--pad-item-top) var(--pad-item-left);
         }
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
       }
     }
 
