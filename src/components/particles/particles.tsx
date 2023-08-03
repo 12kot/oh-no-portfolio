@@ -25,7 +25,7 @@ const getImage = (count: number): ReactElement[] => {
 };
 
 const Particles = () => {
-  return <div className={styles.particle_container}>{getImage(30)}</div>;
+  return <div className={styles.particle_container}>{getImage(20)}</div>;
 };
 
 export default Particles;

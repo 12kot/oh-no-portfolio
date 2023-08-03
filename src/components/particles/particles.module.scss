@@ -12,7 +12,7 @@
   @keyframes particle-animation-#{$i} {
     100% {
       transform: translate3d(
-        (random(10) + vw),
+        (random(60) + vw),
         (random(90) + vh),
         (random(100) + px)
       );
@@ -27,7 +27,7 @@
     animation-delay: -$i * 0.2s;
 
     transform: translate3d(
-      (random(10) + vw),
+      (random(60) + vw),
       (random(90) + vh),
       (random(100) + px)
     );

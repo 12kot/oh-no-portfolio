@@ -5,9 +5,10 @@
   --header-bg: #72e566;
 
   --element-color: #72e566;
-  --element-focus: #5ab550;
+  --element-focus: rgb(23, 31, 62);
 
   --box-shadow-color: #41823c;
+  --box-shadow: 0 calc(var(--main-font-size) / 10) 175px var(--box-shadow-color);
 
   --font-color: #ffffff;
   --font-family: "Montserrat-Regular";
@@ -19,10 +20,11 @@
 
   //COMMON
   --font-size: 1rem;
+  --font-size-head: 48px;
 
   --pad-item-top: 10px;
   --pad-item-left: 14px;
-  --pad-page-top: 2vh;
+  --pad-page-top: calc(var(--header-heigth) + 2vw);
   --pad-page-left: 8vw;
 
   --border-radius: 8px;
@@ -36,6 +38,9 @@
   //MAIN
   --main-font-size: 150px;
   --main-line-height: 130px;
+
+  //ABOUT
+  --pad-about-left: 15vw;
 
   //BANNER
   --banner-heigth: 300px;
@@ -53,9 +58,15 @@
 
   //нетбуки
   @media screen and (max-width: 1280px) {
+    //COMMON
+    --font-size-head: 34px;
+
     //MAIN
     --main-font-size: 120px;
     --main-line-height: 100px;
+
+    //ABOUT
+    --pad-about-left: 10vw;
 
     //BANNER
     --banner-heigth: 300px;
@@ -68,9 +79,15 @@
 
   //планшеты
   @media screen and (max-width: 1024px) {
+    //COMMON
+    --font-size-head: 35px;
+
     //MAIN
     --main-font-size: 90px;
     --main-line-height: 75px;
+
+    //ABOUT
+    --pad-about-left: 5vw;
 
     //BANNER
     --banner-heigth: 300px;
@@ -83,9 +100,15 @@
 
   //огромные телефоны
   @media screen and (max-width: 768px) {
+    //COMMON
+    --font-size-head: 30px;
+
     //MAIN
     --main-font-size: 60px;
     --main-line-height: 50px;
+
+    //ABOUT
+    --pad-about-left: 5vw;
 
     //BANNER
     --banner-heigth: 300px;
@@ -98,9 +121,15 @@
 
   //телефоны
   @media screen and (max-width: 480px) {
+    //COMMON
+    --font-size-head: 20px;
+
     //MAIN
     --main-font-size: 45px;
     --main-line-height: 40px;
+
+    //ABOUT
+    --pad-about-left: 2vw;
 
     //BANNER
     --banner-heigth: 300px;
@@ -113,9 +142,15 @@
 
   //милипиздрики
   @media screen and (max-width: 320px) {
+    //COMMON
+    --font-size-head: 15px;
+
     //MAIN
     --main-font-size: 35px;
     --main-line-height: 30px;
+
+    //ABOUT
+    --pad-about-left: 2vw;
 
     //BANNER
     --banner-heigth: 300px;

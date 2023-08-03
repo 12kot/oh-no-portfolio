@@ -10,8 +10,10 @@
   position: relative;
   height: 100vh;
 
-  text-shadow: 0 calc(var(--main-font-size) / 10) 150px var(--box-shadow-color);
+  text-shadow: var(--box-shadow);
   line-height: var(--main-line-height);
+
+  overflow: hidden;
 
   @extend .flex;
 
@@ -20,9 +22,9 @@
 
     .item {
       display: flex;
+      z-index: 2;
 
       h1 {
-        z-index: 2;
         font-size: var(--main-font-size);
         font-family: "SuperMario";
       }

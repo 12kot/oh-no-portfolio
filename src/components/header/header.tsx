@@ -1,6 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactElement } from "react";
 import styles from "./header.module.scss";
 import dino from "../../img/dino.webp";
+
+const nav: string[] = ["About", "Skills", "Projects", "Contacts"];
+
+const getNav = (): ReactElement[] => {
+  return nav.map((item) => (
+    <li key={item}>
+      <a href={`#${item.toLowerCase()}`}>{item}</a>
+    </li>
+  ));
+};
 
 const Header = () => {
   const [bgActive, setBgActive] = useState<boolean>(false);
@@ -20,20 +30,7 @@ const Header = () => {
 
       <section className={styles.menu}>
         <nav className={styles.nav}>
-          <ul>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+          <ul>{getNav()}</ul>
         </nav>
         <button className={styles.lng}>lng</button>
       </section>
