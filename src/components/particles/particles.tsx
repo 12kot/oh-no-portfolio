@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react";
 import styles from "./particles.module.scss";
-import dino from "../../img/dino.webp";
+import dino from "../../img/png/dino.webp";
+import amNam1 from "../../img/png/amNam1.png";
+import amNam2 from "../../img/png/amNam2.png";
 import { v4 } from "uuid";
 
 const pathes = [
@@ -9,8 +11,8 @@ const pathes = [
   "https://cdn.svgporn.com/logos/redux.svg",
   "https://cdn.svgporn.com/logos/html-5.svg",
   dino,
-  "https://avatanplus.com/files/resources/original/58824f597bfcc159bd05f5a4.png",
-  "https://avatanplus.com/files/resources/original/574ad9e1e8bbd154fc631aa1.png",
+  amNam1,
+  amNam2,
 ];
 
 const getImage = (count: number): ReactElement[] => {

@@ -19,8 +19,8 @@
   --banner-font-bd: 1px rgb(54, 76, 90);
 
   //COMMON
-  --font-size: 1rem;
-  --font-size-head: 48px;
+  --font-size: 18px;
+  --font-size-head: 45px;
 
   --pad-item-top: 10px;
   --pad-item-left: 14px;
@@ -40,7 +40,10 @@
   --main-line-height: 130px;
 
   //ABOUT
-  --pad-about-left: 15vw;
+  --about-box-width: 750px;
+  --about-box-heigth: 225px;
+  --about-blob-size: 225px;
+  --about-box-gap: 80px;
 
   //BANNER
   --banner-heigth: 300px;
@@ -59,14 +62,18 @@
   //нетбуки
   @media screen and (max-width: 1280px) {
     //COMMON
-    --font-size-head: 34px;
+    --font-size-head: 36px;
+    --font-size: 17px;
 
     //MAIN
     --main-font-size: 120px;
     --main-line-height: 100px;
 
     //ABOUT
-    --pad-about-left: 10vw;
+    --about-box-width: 650px;
+    --about-box-heigth: 190px;
+    --about-blob-size: 190px;
+    --about-box-gap: 70px;
 
     //BANNER
     --banner-heigth: 300px;
@@ -80,14 +87,18 @@
   //планшеты
   @media screen and (max-width: 1024px) {
     //COMMON
-    --font-size-head: 35px;
+    --font-size-head: 30px;
+    --font-size: 16px;
 
     //MAIN
     --main-font-size: 90px;
     --main-line-height: 75px;
 
     //ABOUT
-    --pad-about-left: 5vw;
+    --about-box-width: 95%;
+    --about-box-heigth: 90%;
+    --about-blob-size: 215px;
+    --about-box-gap: 60px;
 
     //BANNER
     --banner-heigth: 300px;
@@ -101,14 +112,18 @@
   //огромные телефоны
   @media screen and (max-width: 768px) {
     //COMMON
-    --font-size-head: 30px;
+    --font-size-head: 25px;
+    --font-size: 15px;
 
     //MAIN
     --main-font-size: 60px;
     --main-line-height: 50px;
 
     //ABOUT
-    --pad-about-left: 5vw;
+    --about-box-width: 95%;
+    --about-box-heigth: 90%;
+    --about-blob-size: 200px;
+    --about-box-gap: 50px;
 
     //BANNER
     --banner-heigth: 300px;
@@ -122,14 +137,18 @@
   //телефоны
   @media screen and (max-width: 480px) {
     //COMMON
-    --font-size-head: 20px;
+    --font-size-head: 18px;
+    --font-size: 14px;
 
     //MAIN
     --main-font-size: 45px;
     --main-line-height: 40px;
 
     //ABOUT
-    --pad-about-left: 2vw;
+    --about-box-width: 95%;
+    --about-box-heigth: 90%;
+    --about-blob-size: 190px;
+    --about-box-gap: 40px;
 
     //BANNER
     --banner-heigth: 300px;
@@ -144,13 +163,17 @@
   @media screen and (max-width: 320px) {
     //COMMON
     --font-size-head: 15px;
+    --font-size: 13px;
 
     //MAIN
     --main-font-size: 35px;
     --main-line-height: 30px;
 
     //ABOUT
-    --pad-about-left: 2vw;
+    --about-box-width: 95%;
+    --about-box-heigth: 90%;
+    --about-blob-size: 180px;
+    --about-box-gap: 30px;
 
     //BANNER
     --banner-heigth: 300px;

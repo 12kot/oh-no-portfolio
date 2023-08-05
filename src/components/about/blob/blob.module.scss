@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 1px 150px var(--box-shadow-color));
+
+  .box {
+    background-color: var(--element-color);
+    background-image: url("/img/png/avatar.png");
+
+    -webkit-background-size: 130%;
+    background-size: 130%;
+
+    background-position: center center;
+
+    height: var(--about-blob-size);
+    width: var(--about-blob-size);
+
+    animation: animate 5s ease-in-out infinite;
+    transition: all var(--transition) ease-in-out;
+
+    @keyframes animate {
+      0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+      }
+      50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+      }
+      100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+      }
+    }
+  }
+}

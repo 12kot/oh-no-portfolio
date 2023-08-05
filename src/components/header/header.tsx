@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ReactElement } from "react";
 import styles from "./header.module.scss";
-import dino from "../../img/dino.webp";
+import dino from "../../img/png/dino.webp";
 
 const nav: string[] = ["About", "Skills", "Projects", "Contacts"];
 
