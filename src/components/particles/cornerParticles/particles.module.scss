@@ -1,0 +1,77 @@
+$firstRotate: -45deg;
+$secondRotate: -35deg;
+$thirdRotate: 35deg;
+
+.animation {
+  &:hover {
+    animation: animate 1s;
+  }
+
+  @keyframes animate {
+    0% {
+      scale: 1;
+    }
+    10% {
+      scale: 1.02;
+    }
+    30% {
+      scale: 1;
+    }
+    50% {
+      scale: 1.02;
+    }
+    70% {
+      scale: 1;
+    }
+    90% {
+      scale: 1.02;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+}
+
+.container {
+  z-index: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+  overflow-x: clip;
+
+  img:nth-child(1) {
+    top: var(--corner-particles-top);
+    right: var(--corner-particles-rigth);
+    transform: rotate($firstRotate);
+
+    @extend .animation;
+  }
+
+  img:nth-child(2) {
+    bottom: var(--corner-particles-top);
+    right: var(--corner-particles-rigth);
+    transform: rotate($secondRotate);
+
+    @extend .animation;
+  }
+
+  img:nth-child(3) {
+    bottom: var(--corner-particles-top);
+    left: var(--corner-particles-rigth);
+    transform: rotate($thirdRotate);
+
+    @extend .animation;
+  }
+
+  img {
+    z-index: 5;
+
+    position: absolute;
+    height: var(--corner-particles-img-heigth);
+
+    filter: drop-shadow(0 0px 175px var(--box-shadow-color));
+    transition: var(--transition);
+  }
+}

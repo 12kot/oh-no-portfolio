@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import styles from "./particles.module.scss";
-import dino from "../../img/png/dino.webp";
-import amNam1 from "../../img/png/amNam1.png";
-import amNam2 from "../../img/png/amNam2.png";
+import dino from "img/png/dino.webp";
+import amNam1 from "img/png/amNam1.png";
+import amNam2 from "img/png/amNam2.png";
 import { v4 } from "uuid";
 
 const pathes = [
@@ -26,8 +26,8 @@ const getImage = (count: number): ReactElement[] => {
   ));
 };
 
-const Particles = () => {
-  return <div className={styles.particle_container}>{getImage(20)}</div>;
+const Particles = (props: {count: number}) => {
+  return <div className={styles.particle_container}>{getImage(props.count)}</div>;
 };
 
 export default Particles;

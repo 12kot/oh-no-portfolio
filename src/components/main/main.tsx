@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react";
 import styles from "./main.module.scss";
-import Particles from "../particles/particles";
+import Particles from "../particles/aLotOfParticles/particles";
 
 //import { motion, useScroll, useTransform } from "framer-motion";
-import Scrolldown from "../../img/svg/scrolldown";
+import Scrolldown from "img/svg/scrolldown/scrolldown";
 import { v4 } from "uuid";
 
 //const delay = 0.1;
@@ -21,32 +21,22 @@ import { v4 } from "uuid";
 // };
 
 const getText = (text: string): ReactElement[] => {
-  return text.split("").map((char, i) => (
-    <h1
-      key={v4()}>
-      {char}
-    </h1>
-  ));
+  return text.split("").map((char, i) => <h1 key={v4()}>{char}</h1>);
 };
 
 const Main = () => {
-    return (
+  return (
     <>
-      <Particles />
-        <main className={styles.main} id="#">
+      <Particles count={20} />
+      <main className={styles.main} id="#">
         <section className={styles.text}>
-          <div  className={styles.item}>
-            {getText("WHO'S")}
-          </div>
-          <div className={`${styles.name} ${styles.item}`}
-          >
+          <div className={styles.item}>{getText("WHO'S")}</div>
+          <div className={`${styles.name} ${styles.item}`}>
             {getText("NIKITOSHA ?")}
           </div>
         </section>
 
-        <a href="#about" className={styles.scroll}>
-          <Scrolldown />
-        </a>
+        <Scrolldown path="#about"/>
       </main>
     </>
   );

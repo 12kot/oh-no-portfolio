@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  padding: var(--pad-item-top) 0;
+  @extend .flex;
+
+  .svg {
+    fill: var(--element-color);
+  }
+}

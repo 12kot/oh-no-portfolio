@@ -4,6 +4,8 @@ import GithubSVG from "../../img/svg/github";
 import Blob from "./blob/blob";
 import LinkedInSVG from "../../img/svg/linkedIn";
 import TelegramSVG from "../../img/svg/telegram";
+import CornerParticles from "components/particles/cornerParticles/particles";
+import Scrolldown from "img/svg/scrolldown/scrolldown";
 
 const medias: { link: string; svg: () => ReactElement }[] = [
   {
@@ -36,6 +38,7 @@ const getMedias = (): ReactElement[] =>
 const About = (): ReactElement => {
   return (
     <main className={styles.container} id="about">
+      <CornerParticles />
       <article className={styles.mainInfo}>
         <section className={styles.info}>
           <h2 className={styles.header}>
@@ -51,6 +54,7 @@ const About = (): ReactElement => {
         </section>
         <Blob />
       </article>
+      <Scrolldown path="#projects"/>
     </main>
   );
 };

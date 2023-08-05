@@ -15,12 +15,12 @@ const getNav = (): ReactElement[] => {
 const Header = () => {
   const [bgActive, setBgActive] = useState<boolean>(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY >= 65) setBgActive(true);
-      else setBgActive(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", function () {
+  //     if (window.scrollY >= 65) setBgActive(true);
+  //     else setBgActive(false);
+  //   });
+  // }, []);
 
   return (
     <header className={`${styles.container} ${bgActive && styles.active}`}>
