@@ -1,0 +1,50 @@
+@import "../skills.module.scss";
+
+.technologies {
+  width: var(--skills-box-width);
+  height: 40px;
+
+  align-items: center;
+  justify-content: flex-start;
+  @extend .flex;
+
+  hr {
+    width: 2px;
+    height: 80%;
+    border: none;
+    color: var(--element-color);
+    background-color: var(--element-color);
+    margin: 0;
+  }
+
+  .icons {
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    @extend .flex;
+
+    svg {
+      box-shadow: 0px 0px 150px var(--box-shadow-color);
+      margin-top: 2px;
+      margin-left: var(--tech-margin-left);
+      height: 32px;
+      width: 32px;
+
+      transition: var(--transition);
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    height: fit-content;
+
+    hr {
+      width: 80%;
+      height: 1px;
+    }
+  }
+}

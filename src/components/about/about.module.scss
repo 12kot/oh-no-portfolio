@@ -7,62 +7,8 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  
+
   justify-content: center;
   align-items: center;
   @extend .flex;
-  
-  .mainInfo {
-    width: var(--about-box-width);
-    height: var(--about-box-heigth);
-    gap: calc(var(--about-box-gap));
-
-    @extend .flex;
-
-    .info {
-      z-index: 10;
-      @extend .flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      .header {
-        font-size: var(--font-size-head);
-        line-height: calc(var(--font-size-head));
-      }
-
-      .name {
-        color: var(--element-color);
-      }
-
-      .contacts {
-        z-index: 2;
-        @extend .flex;
-        gap: var(--gap);
-        height: 32px;
-
-        .item {
-          box-shadow: 0 1px 100px var(--box-shadow-color);
-
-          fill: var(--element-color);
-
-          svg {
-            width: 32px;
-            height: 32px;
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column-reverse;
-
-      text-align: center;
-      justify-content: center;
-
-      .info {
-        align-items: center;
-        gap: calc(var(--gap) * 2);
-      }
-    }
-  }
 }

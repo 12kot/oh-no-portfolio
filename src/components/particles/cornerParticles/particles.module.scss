@@ -4,31 +4,7 @@ $thirdRotate: 35deg;
 
 .animation {
   &:hover {
-    animation: animate 1s;
-  }
-
-  @keyframes animate {
-    0% {
-      scale: 1;
-    }
-    10% {
-      scale: 1.02;
-    }
-    30% {
-      scale: 1;
-    }
-    50% {
-      scale: 1.02;
-    }
-    70% {
-      scale: 1;
-    }
-    90% {
-      scale: 1.02;
-    }
-    100% {
-      scale: 1;
-    }
+    scale: 1.1;
   }
 }
 

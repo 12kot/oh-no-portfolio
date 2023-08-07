@@ -1,0 +1,29 @@
+@import "../about/about.module.scss";
+
+.flex {
+  display: flex;
+  gap: calc(var(--gap));
+}
+
+.container {
+  .content {
+    flex-direction: column;
+    gap: calc(var(--about-box-gap) / 2);
+
+    @extend .flex;
+
+    p {
+      font-size: var(--font-size);
+    }
+
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.important {
+  color: var(--element-color);
+}

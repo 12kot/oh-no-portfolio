@@ -1,0 +1,30 @@
+@import "../skills.module.scss";
+
+.box {
+  height: var(--skills-box-heigth);
+  width: var(--skills-box-width);
+  gap: calc(var(--about-box-gap));
+
+  @extend .flex;
+
+  .image {
+    height: var(--skills-img-size);
+    width: var(--skills-img-size);
+  }
+
+  .description {
+    flex-direction: column;
+    justify-content: space-evenly;
+    @extend .flex;
+
+    .header {
+      font-size: var(--font-size-head);
+      line-height: calc(var(--font-size-head));
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
