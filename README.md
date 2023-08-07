@@ -1,4 +1,4 @@
-# Online shop
+# Portfolio
 + Demo -> https://nikitosha.web.app/
 
 ## Others projects
