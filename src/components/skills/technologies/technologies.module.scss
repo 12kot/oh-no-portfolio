@@ -24,7 +24,7 @@
     @extend .flex;
 
     svg {
-      box-shadow: 0px 0px 150px var(--box-shadow-color);
+      filter: drop-shadow(0px 0px 50px var(--box-shadow-color));
       margin-top: 2px;
       margin-left: var(--tech-margin-left);
       height: 32px;
