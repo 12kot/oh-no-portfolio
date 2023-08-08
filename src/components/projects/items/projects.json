@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "image": ["eDelivery.jpg"],
+      "name": "eDelivery",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["React", "SCSS", "Firebase"],
+      "links": [
+        {
+          "desc": "Code",
+          "link": "dwdw",
+          "image": "github"
+          },
+        {
+          "desc": "Live Demo",
+          "link": "dwdw",
+          "image": "newpage"
+        }
+      ]
+    },
+    {
+      "image": ["eDelivery.jpg"],
+      "name": "eDelivery",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["React", "SCSS", "Firebase"],
+      "links": [
+        {
+          "desc": "Code",
+          "link": "dwdw",
+          "image": "ffef"
+        },
+        {
+          "desc": "Live Demo",
+          "link": "dwdw",
+          "image": "ffef"
+        }
+      ]
+    },
+    {
+      "image": ["eDelivery.jpg"],
+      "name": "eDelivery",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["React", "SCSS", "Firebase"],
+      "links": [
+        {
+          "desc": "Code",
+          "link": "dwdw",
+          "image": "ffef"
+        },
+        {
+          "desc": "Live Demo",
+          "link": "dwdw",
+          "image": "ffef"
+        }
+      ]
+    },
+    {
+      "image": ["eDelivery.jpg"],
+      "name": "eDelivery",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["React", "SCSS", "Firebase"],
+      "links": [
+        {
+          "desc": "Code",
+          "link": "dwdw",
+          "image": "ffef"
+        },
+        {
+          "desc": "Live Demo",
+          "link": "dwdw",
+          "image": "ffef"
+        }
+      ]
+    }
+  ]
+}

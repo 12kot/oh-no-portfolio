@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { ReactElement } from "react";
 import styles from "./projects.module.scss";
+import Items from "./items/items";
 
-const Projects = () => {
+const Projects = (): ReactElement => {
   return (
-    <div className={styles.container} id="projects">Projects</div>
-  )
-}
+    <main className={styles.container} id="projects">
+      <Items />
+    </main>
+  );
+};
 
-export default Projects
+export default Projects;
