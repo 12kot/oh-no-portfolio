@@ -1,6 +1,6 @@
 :root {
   //COMMON
-  --focus-color: rgb(23, 31, 62);
+  --focus-color: #171f3e;
   --bg-color: #1c264c;
   --header-bg: #72e566;
 
@@ -12,6 +12,8 @@
 
   --font-color: #ffffff;
   --font-family: "Montserrat-Regular";
+
+  //PROJECTS
 
   //PARTICLES
 
@@ -52,6 +54,16 @@
   --skills-box-heigth: 250px;
   --skills-img-size: 250px;
   --tech-margin-lef: 100px;
+
+  //PROJECTS
+  --projects-items-width: 990px;
+  --projects-items-gap: 64px;
+  --projects-content-gap: 48px;
+  --projects-item-heigth: 400px;
+  --projects-pad-top: 20px;
+  --projects-pad-left: 20px;
+  --projects-img-width: 530px;
+  --projects-description-pad-left: 0px;
 
   //PARTICLES
   --corner-particles-img-heigth: 250px;
@@ -94,6 +106,10 @@
     --skills-img-size: 225px;
     --skills-box-gap: 10px;
 
+    //PROJECTS
+    --projects-items-width: 900px;
+    --projects-img-width: 460px;
+
     //PARTICLES
     --corner-particles-img-heigth: 200px;
     --corner-particles-rigth: -50px;
@@ -128,6 +144,15 @@
     --skills-box-width: 95%;
     --skills-box-heigth: 90%;
     --skills-img-size: 215px;
+
+    //PROJECTS
+    --projects-items-width: 570px;
+    --projects-item-heigth: 750px;
+    --projects-img-width: 660px;
+    --projects-img-heigth: 350px;
+    --projects-description-pad-left: 100px;
+    --projects-items-gap: 48px;
+    --projects-content-gap: 16px;
 
     //PARTICLES
     --corner-particles-img-heigth: 175px;
@@ -164,6 +189,15 @@
     --skills-box-heigth: 90%;
     --skills-img-size: 200px;
 
+    //PROJECTS
+    --projects-items-width: 430px;
+    --projects-item-heigth: 600px;
+    --projects-img-width: 390px;
+    --projects-img-heigth: 250px;
+    --projects-description-pad-left: 40px;
+    --projects-items-gap: 48px;
+    --projects-content-gap: 16px;
+
     //PARTICLES
     --corner-particles-img-heigth: 150px;
     --corner-particles-rigth: -35px;
@@ -198,6 +232,15 @@
     --skills-box-width: 95%;
     --skills-box-heigth: 90%;
     --skills-img-size: 190px;
+
+    //PROJECTS
+    --projects-items-width: 95%;
+    --projects-item-heigth: 550px;
+    --projects-img-width: 100%;
+    --projects-img-heigth: 220px;
+    --projects-description-pad-left: 10px;
+    --projects-items-gap: 48px;
+    --projects-content-gap: 16px;
 
     //PARTICLES
     --corner-particles-img-heigth: 100px;

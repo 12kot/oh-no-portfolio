@@ -1,74 +1,56 @@
 {
   "projects": [
     {
-      "image": ["eDelivery.jpg"],
-      "name": "eDelivery",
+      "image": ["eDelivery.png"],
+      "name": "Online Shop",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
           "desc": "Code",
-          "link": "dwdw",
+          "link": "https://github.com/12kot/eDelivery",
           "image": "github"
           },
         {
           "desc": "Live Demo",
-          "link": "dwdw",
+          "link": "https://edelivery-00.web.app/",
           "image": "newpage"
         }
       ]
     },
     {
-      "image": ["eDelivery.jpg"],
-      "name": "eDelivery",
+      "image": ["weatherApp.png"],
+      "name": "Weather",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
           "desc": "Code",
-          "link": "dwdw",
-          "image": "ffef"
+          "link": "https://github.com/12kot/weatherApp",
+          "image": "github"
         },
         {
           "desc": "Live Demo",
-          "link": "dwdw",
-          "image": "ffef"
+          "link": "https://weather-00.web.app/",
+          "image": "newpage"
         }
       ]
     },
     {
-      "image": ["eDelivery.jpg"],
-      "name": "eDelivery",
+      "image": ["docFlow.png"],
+      "name": "Documents",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
           "desc": "Code",
-          "link": "dwdw",
-          "image": "ffef"
+          "link": "https://github.com/12kot/Document-Flow_v2",
+          "image": "github"
         },
         {
           "desc": "Live Demo",
-          "link": "dwdw",
-          "image": "ffef"
-        }
-      ]
-    },
-    {
-      "image": ["eDelivery.jpg"],
-      "name": "eDelivery",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
-      "tech": ["React", "SCSS", "Firebase"],
-      "links": [
-        {
-          "desc": "Code",
-          "link": "dwdw",
-          "image": "ffef"
-        },
-        {
-          "desc": "Live Demo",
-          "link": "dwdw",
-          "image": "ffef"
+          "link": "https://document-flow-8d5f2.web.app/",
+          "image": "newpage"
         }
       ]
     }

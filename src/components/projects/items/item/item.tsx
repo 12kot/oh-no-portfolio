@@ -15,7 +15,7 @@ const getTech = (tech: string[]): ReactElement[] => {
 
 const getLinks = (links: linkType[]): ReactElement[] => {
   return links.map((item) => (
-    <a className={styles.link} href={item.link} key={v4()}>
+    <a className={styles.link} href={item.link} target="_blank" key={v4()} rel="noreferrer">
       <p>{item.desc}</p>
       {item.image === "github" ? <GithubSVG /> : <OpenPageSVG />}
     </a>
@@ -24,18 +24,17 @@ const getLinks = (links: linkType[]): ReactElement[] => {
 
 const getImage = (path: string[]): ReactElement => {
   return (
-    <img
-      alt="img"
-      className={styles.image}
-      src={require(`img/projects/${path[0]}`)}
-    ></img>
+    <div className={`${styles.image}`}>
+      <img alt="img" src={require(`img/projects/${path[0]}`)}></img>
+      <img alt="img" src={require(`img/projects/${path[0]}`)}></img>
+    </div>
   );
 };
 
 const Item = (props: { item: projectType; imgLeft: boolean }) => {
   return (
-    <section className={styles.item}>
-      {props.imgLeft && getImage(props.item.image)}
+    <section className={`${styles.item} ${props.imgLeft && styles.isLeft}`}>
+      {getImage(props.item.image)}
 
       <div className={styles.description}>
         <header>
@@ -48,8 +47,6 @@ const Item = (props: { item: projectType; imgLeft: boolean }) => {
         <span className={styles.tech}>{getTech(props.item.tech)}</span>
         <span className={styles.links}>{getLinks(props.item.links)}</span>
       </div>
-
-      {!props.imgLeft && getImage(props.item.image)}
     </section>
   );
 };

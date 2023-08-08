@@ -1,8 +1,8 @@
 .content {
-  width: 900px;
+  width: var(--projects-items-width);
   height: fit-content;
 
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: var(--projects-items-gap);
 }

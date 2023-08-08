@@ -1,23 +1,89 @@
+@function bg($deg) {
+  @return linear-gradient(
+    $deg,
+    hsl(228deg 46% 17%) 0%,
+    hsl(228deg 46% 17%) 4%,
+    hsl(228deg 46% 18%) 9%,
+    hsl(228deg 46% 18%) 14%,
+    hsl(228deg 46% 19%) 19%,
+    hsl(228deg 46% 19%) 24%,
+    hsl(228deg 46% 20%) 29%,
+    hsl(228deg 46% 20%) 35%,
+    hsl(218deg 61% 20%) 41%,
+    hsl(205deg 100% 19%) 48%,
+    hsl(201deg 100% 21%) 57%,
+    hsl(194deg 100% 22%) 68%,
+    hsl(186deg 100% 21%) 101%,
+    hsl(174deg 100% 21%) 101%,
+    hsl(162deg 100% 23%) 102%,
+    hsl(133deg 45% 34%) 102%,
+    hsl(116deg 37% 40%) 101%,
+    hsl(115deg 37% 43%) 101%,
+    hsl(115deg 37% 47%) 101%,
+    hsl(115deg 38% 50%) 101%,
+    hsl(115deg 44% 54%) 101%,
+    hsl(115deg 51% 57%) 100%,
+    hsl(115deg 60% 61%) 100%,
+    hsl(114deg 71% 65%) 100%
+  );
+}
+
+.isLeft {
+  .image {
+    order: 1;
+  }
+
+  .description {
+    order: 2;
+  }
+
+  background: bg(210deg) !important;
+  box-shadow: 1px 1px 5px #141414 !important;
+}
+
 .item {
+  background: bg(140deg);
+
   width: 100%;
-  height: 350px;
+  height: var(--projects-item-heigth);
+
+  box-shadow: -1px 1px 5px #141414;
 
   display: flex;
-  gap: 20px;
+  padding: var(--projects-pad-top) var(--projects-pad-left);
+  gap: var(--projects-content-gap);
+  border-radius: calc(var(--border-radius));
 
   .image {
-    flex-grow: 1.7;
-    flex-basis: 0;
-    background-color: aqua;
+    max-width: var(--projects-img-width);
+    height: var(--projects-img-heigth);
     overflow: hidden;
-    object-fit: cover;
 
-    border-radius: var(--border-radius);
+    order: 2;
+
+    box-shadow: 0 0 5px #141414;
+
+    display: flex;
+    flex-direction: column;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+
+      transition: 5s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: translateY(-100%);
+      }
+    }
+
+    border-radius: calc(var(--border-radius) + 1px);
   }
 
   .description {
     text-align: center;
-    //padding: 0 10px;
 
     flex-basis: 0;
     flex-grow: 1;
@@ -31,6 +97,16 @@
       display: flex;
       width: 100%;
       justify-content: space-evenly;
+
+      .techItem {
+        transition: var(--transition);
+
+        padding: var(--pad-item-top) var(--pad-item-left);
+        border-radius: var(--border-radius);
+        &:hover {
+          background-color: var(--focus-color);
+        }
+      }
     }
 
     .links {
@@ -60,6 +136,21 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+
+    align-items: center;
+
+    .image {
+      order: 1;
+    }
+
+    .description {
+      padding: 0 var(--projects-description-pad-left);
+      order: 2;
     }
   }
 }
