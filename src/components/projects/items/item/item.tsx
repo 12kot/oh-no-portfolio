@@ -1,26 +1,9 @@
 import React, { ReactElement } from "react";
 import styles from "./item.module.scss";
-import { linkType, projectType } from "types/types";
-import { v4 } from "uuid";
-import OpenPageSVG from "img/svg/openPage";
-import GithubSVG from "img/svg/github";
-
-const getTech = (tech: string[]): ReactElement[] => {
-  return tech.map((item) => (
-    <p className={styles.techItem} key={v4()}>
-      <b className={styles.important}>{item}</b>
-    </p>
-  ));
-};
-
-const getLinks = (links: linkType[]): ReactElement[] => {
-  return links.map((item) => (
-    <a className={styles.link} href={item.link} target="_blank" key={v4()} rel="noreferrer">
-      <p>{item.desc}</p>
-      {item.image === "github" ? <GithubSVG /> : <OpenPageSVG />}
-    </a>
-  ));
-};
+import { projectType } from "types/types";
+import TextBG from "components/textBG/textBG";
+import Description from "./description/description";
+import AmNam from "./amNam/amNam";
 
 const getImage = (path: string[]): ReactElement => {
   return (
@@ -33,21 +16,15 @@ const getImage = (path: string[]): ReactElement => {
 
 const Item = (props: { item: projectType; imgLeft: boolean }) => {
   return (
-    <section className={`${styles.item} ${props.imgLeft && styles.isLeft}`}>
-      {getImage(props.item.image)}
+    <div className={styles.box}>
+      <AmNam isLeft={props.imgLeft} />
+      <section className={`${styles.item} ${props.imgLeft && styles.isLeft}`}>
+        <TextBG text={props.item.name} />
 
-      <div className={styles.description}>
-        <header>
-          <h3>
-            <b className={styles.important}>{props.item.name}</b>
-          </h3>
-        </header>
-
-        <p>{props.item.description}</p>
-        <span className={styles.tech}>{getTech(props.item.tech)}</span>
-        <span className={styles.links}>{getLinks(props.item.links)}</span>
-      </div>
-    </section>
+        {getImage(props.item.image)}
+        <Description {...props} />
+      </section>
+    </div>
   );
 };
 

@@ -1,0 +1,32 @@
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+
+      transition: var(--transition);
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: var(--element-color);
+
+      svg {
+        fill: var(--element-color);
+      }
+    }
+  }
+}
+
+.important {
+  color: var(--element-color);
+}

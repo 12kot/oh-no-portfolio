@@ -1,0 +1,23 @@
+.bg {
+  position: absolute;
+  font-family: var(--banner-font-family);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250%;
+  height: 100%;
+
+  z-index: 0;
+
+  transform: rotate(var(--banner-text-rotate));
+  word-break: break-word;
+
+  color: var(--bg-color);
+  -webkit-text-stroke: var(--banner-font-bd);
+  text-stroke: var(--banner-font-bd);
+
+  line-height: var(--banner-line-height);
+  letter-spacing: var(--banner-letter-spacing);
+  font-size: var(--banner-font-size);
+}

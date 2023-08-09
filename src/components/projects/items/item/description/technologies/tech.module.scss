@@ -1,0 +1,20 @@
+.tech {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+
+  .techItem {
+    transition: var(--transition);
+
+    padding: var(--pad-item-top) var(--pad-item-left);
+    border-radius: var(--border-radius);
+    &:hover {
+      background-color: var(--focus-color);
+      cursor: pointer;
+    }
+  }
+}
+
+.important {
+  color: var(--element-color);
+}

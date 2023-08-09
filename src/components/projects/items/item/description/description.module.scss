@@ -1,0 +1,26 @@
+.description {
+  text-align: center;
+  
+  z-index: 2;
+
+  flex-basis: 0;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 var(--projects-description-pad-left);
+    order: 2;
+  }
+}
+
+.left {
+  order: 2;
+}
+
+.important {
+  color: var(--element-color);
+}

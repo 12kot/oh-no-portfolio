@@ -9,7 +9,7 @@
 .scroll {
   position: absolute;
   bottom: 0;
-  z-index: 2;
+  z-index: 200;
   padding: var(--pad-item-top) 0;
   @extend .flex;
 
