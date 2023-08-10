@@ -19,7 +19,7 @@ const Item = (props: { item: projectType; imgLeft: boolean }) => {
     <div className={styles.box}>
       <AmNam isLeft={props.imgLeft} />
       <section className={`${styles.item} ${props.imgLeft && styles.isLeft}`}>
-        <TextBG text={props.item.name} />
+        <TextBG text={props.item.name} count={255} />
 
         {getImage(props.item.image)}
         <Description {...props} />

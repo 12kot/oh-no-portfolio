@@ -65,6 +65,11 @@
   --projects-img-width: 530px;
   --projects-description-pad-left: 0px;
 
+  //CONTACTS
+  --contacts-form-width: 500px;
+  --contacts-form-height: 80%;
+  --contacts-form-radius: 20px;
+
   //PARTICLES
   --corner-particles-img-heigth: 250px;
   --corner-particles-rigth: -65px;
@@ -110,6 +115,9 @@
     --projects-items-width: 900px;
     --projects-img-width: 460px;
 
+    //CONTACTS
+    --contacts-form-height: 75%;
+
     //PARTICLES
     --corner-particles-img-heigth: 200px;
     --corner-particles-rigth: -50px;
@@ -153,6 +161,9 @@
     --projects-description-pad-left: 100px;
     --projects-items-gap: 48px;
     --projects-content-gap: 16px;
+
+    //CONTACTS
+    --contacts-form-height: 75%;
 
     //PARTICLES
     --corner-particles-img-heigth: 175px;
@@ -198,6 +209,10 @@
     --projects-items-gap: 48px;
     --projects-content-gap: 16px;
 
+    //CONTACTS
+    --contacts-form-height: 70%;
+    --contacts-form-width: 400px;
+
     //PARTICLES
     --corner-particles-img-heigth: 150px;
     --corner-particles-rigth: -35px;
@@ -242,6 +257,10 @@
     --projects-items-gap: 48px;
     --projects-content-gap: 16px;
 
+    //CONTACTS
+    --contacts-form-height: 65%;
+    --contacts-form-width: 300px;
+
     //PARTICLES
     --corner-particles-img-heigth: 100px;
     --corner-particles-rigth: -25px;
@@ -276,6 +295,10 @@
     --skills-box-width: 95%;
     --skills-box-heigth: 90%;
     --skills-img-size: 180px;
+
+    //CONTACTS
+    --contacts-form-height: 60%;
+    --contacts-form-width: 275px;
 
     //PARTICLES
     --corner-particles-img-heigth: 75px;
