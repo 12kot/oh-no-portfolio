@@ -1,8 +1,20 @@
+.inputArea {
+  padding: 12px 8px;
+  border-radius: 4px;
+  background-color: inherit;
+  border: 1px solid var(--focus-color);
+  width: 100%;
+  color: #fff;
+  transition: var(--transition);
+}
+
 .container {
   z-index: 2;
 
   background-color: var(--bg-color);
   height: var(--contacts-form-height);
+  min-height: var(--contacts-form-min-height);
+  max-height: var(--contacts-form-max-height);
   width: var(--contacts-form-width);
 
   box-shadow: 1px 1px 5px #141414;
@@ -13,7 +25,7 @@
 
   .header {
     text-align: center;
-    height: 25%;
+    height: 20%;
 
     display: flex;
     justify-content: center;
@@ -27,7 +39,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
+
     padding: var(--contacts-form-radius);
 
     display: flex;
@@ -37,16 +49,31 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      
+
       height: 100%;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+
+        input,
+        textarea {
+          resize: none;
+          @extend .inputArea;
+
+          &:focus {
+            border: 1px solid var(--element-color);
+          }
+        }
+      }
 
       .rowInput {
         display: flex;
         gap: var(--gap);
 
-        input {
+        .input {
           flex-grow: 1;
-
           width: 45%;
         }
       }
@@ -55,13 +82,24 @@
 
   .links {
     background-color: #141414;
-    height: 25%;
+    height: 20%;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+
+  .submit {
+    border: 2px solid var(--focus-color);
+    @extend .inputArea;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--element-color);
+    }
   }
 }
 

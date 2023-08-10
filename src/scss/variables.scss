@@ -5,13 +5,16 @@
   --header-bg: #72e566;
 
   --element-color: #72e566;
-  --element-focus: rgb(23, 31, 62);
+  --element-focus: #171f3e;
 
   --box-shadow-color: #41823c;
   --box-shadow: 0 calc(var(--main-font-size) / 10) 175px var(--box-shadow-color);
 
   --font-color: #ffffff;
   --font-family: "Montserrat-Regular";
+
+  //CONTACTS
+  --contacts-form-button-bg: #1c264c;
 
   //PROJECTS
 
@@ -69,6 +72,8 @@
   --contacts-form-width: 500px;
   --contacts-form-height: 80%;
   --contacts-form-radius: 20px;
+  --contacts-form-min-height: 550px;
+  --contacts-form-max-height: 600px;
 
   //PARTICLES
   --corner-particles-img-heigth: 250px;
@@ -117,6 +122,7 @@
 
     //CONTACTS
     --contacts-form-height: 75%;
+    --contacts-form-min-height: 550px;
 
     //PARTICLES
     --corner-particles-img-heigth: 200px;
@@ -164,6 +170,7 @@
 
     //CONTACTS
     --contacts-form-height: 75%;
+    --contacts-form-min-height: 550px;
 
     //PARTICLES
     --corner-particles-img-heigth: 175px;
@@ -211,6 +218,7 @@
 
     //CONTACTS
     --contacts-form-height: 70%;
+    --contacts-form-min-height: 550px;
     --contacts-form-width: 400px;
 
     //PARTICLES
@@ -259,6 +267,7 @@
 
     //CONTACTS
     --contacts-form-height: 65%;
+    --contacts-form-min-height: 500px;
     --contacts-form-width: 300px;
 
     //PARTICLES
@@ -299,6 +308,7 @@
     //CONTACTS
     --contacts-form-height: 60%;
     --contacts-form-width: 275px;
+    --contacts-form-min-height: 500px;
 
     //PARTICLES
     --corner-particles-img-heigth: 75px;

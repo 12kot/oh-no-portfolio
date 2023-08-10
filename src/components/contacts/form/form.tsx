@@ -11,14 +11,41 @@ const Form = (): ReactElement => {
       </header>
       <section className={styles.content}>
         <form className={styles.form}>
-          <input placeholder="FirstName"></input>
-          <div className={styles.rowInput}>
-            <input placeholder="Email"></input>
-            <input placeholder="tg optional"></input>
+          <div className={styles.input}>
+            <label htmlFor="">
+              Firstname <b className={styles.important}>*</b>
+            </label>
+            <input placeholder="Nikitosha" type="text"></input>
           </div>
-          <input placeholder="description"></input>
-
-          <button>Send</button>
+          <div className={styles.rowInput}>
+            <div className={styles.input}>
+              <label htmlFor="">
+                Email <b className={styles.important}>*</b>
+              </label>
+              <input placeholder="krutoi.email@gmail.com" type="email"></input>
+            </div>
+            <div className={styles.input}>
+              <label htmlFor="">Telegram</label>
+              <input placeholder="kod41" type="text"></input>
+            </div>
+          </div>
+          <div className={styles.input}>
+            <label htmlFor="">
+              Message <b className={styles.important}>*</b>
+            </label>
+            <textarea
+              placeholder="Odnajdy mne na golovu upal kerpich i ya stal bananom..."
+              rows={3}
+            ></textarea>
+          </div>
+          <input
+            className={styles.submit}
+            type="submit"
+            onClick={() => {
+              alert("Пока не работает. ТГ - kod41");
+            }}
+            value="Send"
+          ></input>
         </form>
       </section>
       <section className={styles.links}>Links</section>
