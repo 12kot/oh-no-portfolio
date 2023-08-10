@@ -30,7 +30,7 @@ const Content = (): ReactElement => {
 
       <Input
         label="Message"
-        placeholder="Odnajdy mne na golovu upal kerpich i ya stal bananom..."
+        placeholder="Odnajdy mne na golovu upal kirpich i ya stal bananom..."
         isNecessarily={true}
         type="text"
         isTextarea={true}
