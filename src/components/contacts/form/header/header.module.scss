@@ -1,0 +1,11 @@
+.header {
+  text-align: center;
+  height: 14%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #141414;
+
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}

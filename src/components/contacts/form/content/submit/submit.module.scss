@@ -1,0 +1,12 @@
+@import "../inputStyles.scss";
+
+.submit {
+  border: 2px solid var(--focus-color);
+  @extend .inputArea;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--element-color);
+  }
+}

@@ -1,0 +1,19 @@
+@import "../inputStyles.scss";
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  width: 100%;
+
+  input,
+  textarea {
+    resize: none;
+    @extend .inputArea;
+
+    &:focus {
+      border: 1px solid var(--element-color);
+    }
+  }
+}
