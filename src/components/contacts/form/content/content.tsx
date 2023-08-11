@@ -5,7 +5,14 @@ import Submit from "./submit/submit";
 
 const Content = (): ReactElement => {
   return (
-    <form className={styles.form}>
+    <form
+      className={styles.form}
+      action=""
+      onSubmit={(event) => {
+        event.preventDefault()
+        return false;
+      }}
+    >
       <Input
         label="Firstname"
         placeholder="Nikitosha"
@@ -35,7 +42,7 @@ const Content = (): ReactElement => {
         type="text"
         isTextarea={true}
       />
-      
+
       <Submit value={"Send"} />
     </form>
   );
