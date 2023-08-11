@@ -2,9 +2,38 @@
   background-color: #141414;
   height: 10%;
 
+  position: relative;
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  gap: var(--gap);
+
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+  a {
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      //height: 32px;
+      height: 100%;
+      width: fit-content;
+
+      fill: #fff;
+      transition: var(--transition);
+
+      &:hover {
+        fill: var(--element-color);
+      }
+    }
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
 }

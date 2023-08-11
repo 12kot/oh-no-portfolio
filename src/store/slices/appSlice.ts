@@ -13,7 +13,7 @@ const initialState: appType = {
 export const sendMail = createAsyncThunk<void, void>(
   "app/sendMail",
   async (_, { rejectWithValue }) => {
-    const a = await new Promise((resolve) => setTimeout(resolve, 1000));
+    const a = await new Promise((resolve) => setTimeout(resolve, 5000));
     //return rejectWithValue("")
   }
 );
