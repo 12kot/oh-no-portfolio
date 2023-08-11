@@ -2,21 +2,33 @@ import React, { ReactElement } from "react";
 import styles from "./content.module.scss";
 import Input from "./input/input";
 import Submit from "./submit/submit";
+import { sendMail } from "store/slices/appSlice";
+import { useAppDispatch } from "hooks/hooks";
+
 
 const Content = (): ReactElement => {
+  const dispatch = useAppDispatch();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    dispatch(sendMail());
+    alert("Пока не работает. ТГ - kod41");
+
+    return false;
+  };
+
   return (
     <form
       className={styles.form}
       action=""
       onSubmit={(event) => {
-        event.preventDefault()
-        return false;
+        handleSubmit(event);
       }}
     >
       <Input
         label="Firstname"
         placeholder="Nikitosha"
-        isNecessarily={true}
+        required={true}
         type="text"
       />
 
@@ -24,13 +36,13 @@ const Content = (): ReactElement => {
         <Input
           label="Email"
           placeholder="krutoi.email@gmail.com"
-          isNecessarily={true}
+          required={true}
           type="email"
         />
         <Input
           label="Telegram"
           placeholder="kod41"
-          isNecessarily={false}
+          required={false}
           type="text"
         />
       </div>
@@ -38,7 +50,7 @@ const Content = (): ReactElement => {
       <Input
         label="Message"
         placeholder="Odnajdy mne na golovu upal kirpich i ya stal bananom..."
-        isNecessarily={true}
+        required={true}
         type="text"
         isTextarea={true}
       />

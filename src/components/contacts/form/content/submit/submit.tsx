@@ -2,17 +2,17 @@ import React, { ReactElement, useEffect } from "react";
 import styles from "./submit.module.scss";
 import Loader from "components/ui/loader/loader";
 import { useAppDispatch, useAppSelector } from "hooks/hooks";
-import { sendMail, setSendStatus } from "store/slices/appSlice";
+import { setSendStatus } from "store/slices/appSlice";
 
 interface Props {
   value: string;
 }
 
 const Submit = (props: Props): ReactElement => {
+  const dispatch = useAppDispatch();
   const { sendMailLoading: isLoading, sendMailStatus } = useAppSelector(
     (state) => state.app
   );
-  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (sendMailStatus)
@@ -20,11 +20,6 @@ const Submit = (props: Props): ReactElement => {
         dispatch(setSendStatus({ status: null }));
       }, 4000);
   }, [dispatch, sendMailStatus]);
-
-  const handleCLick = () => {
-    dispatch(sendMail());
-    alert("Пока не работает. ТГ - kod41");
-  };
 
   const getText = (): ReactElement => {
     if (sendMailStatus === "SUCCESS") return <p>✔</p>;
@@ -40,9 +35,6 @@ const Submit = (props: Props): ReactElement => {
         sendMailStatus === "SUCCESS" && styles.success
       } ${sendMailStatus === "ERROR" && styles.error}`}
       type="submit"
-      onClick={() => {
-        handleCLick();
-      }}
       disabled={isLoading || !!sendMailStatus}
     >
       {getText()}

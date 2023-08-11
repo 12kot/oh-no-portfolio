@@ -12,8 +12,14 @@
     resize: none;
     @extend .inputArea;
 
+    color: rgba(251, 251, 251, 0.9);
     &:focus {
       border: 1px solid var(--element-color);
+      color: #fff;
+    }
+
+    &:invalid {
+      border: 1px solid var(--error-element-color);
     }
   }
 }
