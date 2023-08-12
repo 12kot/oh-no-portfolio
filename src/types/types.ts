@@ -11,3 +11,10 @@ export interface linkType {
   link: string;
   image: string;
 }
+
+export interface formType {
+  firstName: string;
+  email: string;
+  telegram: string;
+  message: string;
+}

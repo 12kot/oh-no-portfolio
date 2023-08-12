@@ -6,6 +6,7 @@ import { setSendStatus } from "store/slices/appSlice";
 
 interface Props {
   value: string;
+  disabled: boolean
 }
 
 const Submit = (props: Props): ReactElement => {
@@ -35,7 +36,7 @@ const Submit = (props: Props): ReactElement => {
         sendMailStatus === "SUCCESS" && styles.success
       } ${sendMailStatus === "ERROR" && styles.error}`}
       type="submit"
-      disabled={isLoading || !!sendMailStatus}
+      disabled={isLoading || !!sendMailStatus || props.disabled}
     >
       {getText()}
     </button>
