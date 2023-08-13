@@ -10,12 +10,12 @@ const Header = () => {
   const [bgActive, setBgActive] = useState<boolean>(false);
   const [menuActive, setMenuActive] = useState<boolean>(false);
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", function () {
-  //     if (window.scrollY >= 65) setBgActive(true);
-  //     else setBgActive(false);
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY >= 65) setBgActive(true);
+      else setBgActive(false);
+    });
+  }, []);
 
   return (
     <>
@@ -28,7 +28,10 @@ const Header = () => {
         <section className={styles.menu}>
           <Navigation />
           <LngButton />
-          <MobileMenuButton isActive={menuActive} setMenuActive={setMenuActive}/>
+          <MobileMenuButton
+            isActive={menuActive}
+            setMenuActive={setMenuActive}
+          />
         </section>
       </header>
     </>

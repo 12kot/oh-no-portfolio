@@ -27,4 +27,6 @@
 
 .active {
   background: var(--header-bg);
+  box-shadow: 0px 0px 8px var(--focus-color);
+  backdrop-filter: blur(8px);
 }
