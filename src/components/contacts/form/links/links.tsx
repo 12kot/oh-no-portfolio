@@ -25,7 +25,7 @@ const links: { img: () => ReactElement; link: string }[] = [
   },
 ];
 
-const getLinks = () => {
+export const getLinks = () => {
   return links.map((link) => (
     <a
       className={styles.link}

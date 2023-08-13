@@ -1,19 +1,13 @@
 import React, { useState, useEffect, ReactElement } from "react";
 import styles from "./header.module.scss";
 import dino from "../../img/png/dino.webp";
-
-const nav: string[] = ["About", "Skills", "Projects", "Contacts"];
-
-const getNav = (): ReactElement[] => {
-  return nav.map((item) => (
-    <li key={item}>
-      <a href={`#${item.toLowerCase()}`}>{item}</a>
-    </li>
-  ));
-};
+import Navigation from "./nav/navigation";
+import LngButton from "./lngButton/lngButton";
+import MobileMenu from "./mobileMenu/mobileMenu";
 
 const Header = () => {
   const [bgActive, setBgActive] = useState<boolean>(false);
+  const [menuActive, setMenuActive] = useState<boolean>(false);
 
   // useEffect(() => {
   //   window.addEventListener("scroll", function () {
@@ -23,18 +17,20 @@ const Header = () => {
   // }, []);
 
   return (
-    <header className={`${styles.container} ${bgActive && styles.active}`}>
-      <a href="#" className={styles.dino}>
-        <img src={dino} alt="LOGO" height={"100%"}></img>
-      </a>
+    <>
+      <MobileMenu active={menuActive} />
+      <header className={`${styles.container} ${bgActive && styles.active}`}>
+        <a href="#" className={styles.dino}>
+          <img src={dino} alt="LOGO" height={"100%"}></img>
+        </a>
 
-      <section className={styles.menu}>
-        <nav className={styles.nav}>
-          <ul>{getNav()}</ul>
-        </nav>
-        <button className={styles.lng}>lng</button>
-      </section>
-    </header>
+        <section className={styles.menu}>
+          <Navigation />
+          <LngButton />
+          <button className={styles.menuIcon} onClick={() => {setMenuActive((prev) => !prev)}}>M</button>
+        </section>
+      </header>
+    </>
   );
 };
 

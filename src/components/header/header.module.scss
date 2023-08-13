@@ -22,26 +22,13 @@
     display: flex;
     align-items: center;
     gap: var(--gap);
+    
+    .menuIcon {
+      padding: var(--pad-item-top) var(--pad-item-left);
 
-    .nav {
-      ul {
-        list-style-type: none;
-        display: flex;
-        gap: var(--gap);
-
-        a {
-          font-weight: bold;
-          padding: var(--pad-item-top) var(--pad-item-left);
-        }
-      }
-
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 768px) {
         display: none;
       }
-    }
-
-    .lng {
-      padding: var(--pad-item-top) var(--pad-item-left);
     }
   }
 }
