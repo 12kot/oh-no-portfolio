@@ -9,7 +9,7 @@ const Contacts = (): ReactElement => {
 
   return (
     <main className={styles.container} id="contacts">
-      <TextBG text={t(`nikitosha`).toUpperCase()} count={300} />
+      <TextBG text={t(`nikitosha`).toUpperCase().repeat(2)} count={200} />
       <Form />
     </main>
   );
