@@ -5,6 +5,7 @@ import Particles from "../particles/aLotOfParticles/particles";
 //import { motion, useScroll, useTransform } from "framer-motion";
 import Scrolldown from "img/svg/scrolldown/scrolldown";
 import { v4 } from "uuid";
+import { useTranslation } from "react-i18next";
 
 //const delay = 0.1;
 
@@ -21,22 +22,24 @@ import { v4 } from "uuid";
 // };
 
 const getText = (text: string): ReactElement[] => {
-  return text.split("").map((char, i) => <h1 key={v4()}>{char}</h1>);
+  return text.split("").map((char, i) => <h1 key={v4()}>{char === " " ? <pre> </pre> : char}</h1>);
 };
 
 const Main = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Particles count={20} />
       <main className={styles.main} id="#">
         <section className={styles.text}>
-          <div className={styles.item}>{getText("WHO'S")}</div>
+          <div className={styles.item}>{getText(t("main.who's"))}</div>
           <div className={`${styles.name} ${styles.item}`}>
-            {getText("NIKITOSHA ?")}
+            {getText(t("main.nikitosha"))}
           </div>
         </section>
 
-        <Scrolldown path="#about"/>
+        <Scrolldown path="#about" />
       </main>
     </>
   );

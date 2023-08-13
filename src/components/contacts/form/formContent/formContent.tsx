@@ -6,9 +6,13 @@ import { sendMail } from "store/slices/appSlice";
 import { useAppDispatch } from "hooks/hooks";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { formType } from "types/types";
+import { useTranslation } from "react-i18next";
 
 const FormContent = (): ReactElement => {
+  const { t } = useTranslation();
+  
   const dispatch = useAppDispatch();
+
   const {
     register,
     formState: { errors, isValid },
@@ -24,8 +28,8 @@ const FormContent = (): ReactElement => {
   return (
     <form className={styles.form} action="" onSubmit={handleSubmit(onSubmit)}>
       <Input
-        label="Firstname"
-        placeholder="Nikitosha"
+        label={t(`form.firstname`)}
+        placeholder={t(`nikitosha`)}
         required={true}
         invalid={!!errors?.firstName}
         register={register("firstName", {
@@ -35,8 +39,8 @@ const FormContent = (): ReactElement => {
 
       <div className={styles.rowInput}>
         <Input
-          label="Email"
-          placeholder="krutoi.email@gmail.com"
+          label={t(`form.email`)}
+          placeholder={t(`form.emailExample`)}
           required={true}
           invalid={!!errors?.email}
           register={register("email", {
@@ -48,16 +52,16 @@ const FormContent = (): ReactElement => {
           })}
         />
         <Input
-          label="Telegram"
-          placeholder="kod41"
+          label={t(`form.telegram`)}
+          placeholder={t(`form.telegramExample`)}
           required={false}
           register={register("telegram")}
         />
       </div>
 
       <Input
-        label="Message"
-        placeholder="Odnajdy mne na golovu upal kirpich i ya stal bananom..."
+        label={t(`form.message`)}
+        placeholder={t(`form.messageExample`)}
         required={true}
         invalid={!!errors?.message}
         isTextarea={true}
@@ -67,7 +71,7 @@ const FormContent = (): ReactElement => {
         })}
       />
 
-      <Submit value={"Send"} disabled={!isValid} />
+      <Submit value={t(`form.send`)} disabled={!isValid} />
     </form>
   );
 };

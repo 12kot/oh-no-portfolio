@@ -2,17 +2,17 @@
   "projects": [
     {
       "image": ["eDelivery.png"],
-      "name": "Online Shop",
+      "name": "shop",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
-          "desc": "Code",
+          "desc": "code",
           "link": "https://github.com/12kot/eDelivery",
           "image": "github"
           },
         {
-          "desc": "Live Demo",
+          "desc": "liveDemo",
           "link": "https://edelivery-00.web.app/",
           "image": "newpage"
         }
@@ -20,17 +20,17 @@
     },
     {
       "image": ["weatherApp.png"],
-      "name": "Weather",
+      "name": "weather",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
-          "desc": "Code",
+          "desc": "code",
           "link": "https://github.com/12kot/weatherApp",
           "image": "github"
         },
         {
-          "desc": "Live Demo",
+          "desc": "liveDemo",
           "link": "https://weather-00.web.app/",
           "image": "newpage"
         }
@@ -38,17 +38,17 @@
     },
     {
       "image": ["docFlow.png"],
-      "name": "Documents",
+      "name": "documents",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
-          "desc": "Code",
+          "desc": "code",
           "link": "https://github.com/12kot/Document-Flow_v2",
           "image": "github"
         },
         {
-          "desc": "Live Demo",
+          "desc": "liveDemo",
           "link": "https://document-flow-8d5f2.web.app/",
           "image": "newpage"
         }

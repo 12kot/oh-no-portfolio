@@ -8,14 +8,19 @@ type Props = {
 
 const MobileMenuButton = ({ isActive, setMenuActive }: Props): ReactElement => {
   return (
-    <div className={styles.menuButton}>
+    <button
+      className={styles.menuButton}
+      onClick={() => {
+        setMenuActive((prev) => !prev);
+      }}
+    >
       <input
         id={styles.checkbox2}
         className={`${isActive && styles.active}`}
+        type="checkbox"
         onClick={() => {
           setMenuActive((prev) => !prev);
         }}
-        type="checkbox"
       />
       <label
         className={`${styles.toggle} ${styles.toggle2}`}
@@ -25,7 +30,7 @@ const MobileMenuButton = ({ isActive, setMenuActive }: Props): ReactElement => {
         <div id={styles.bar5} className={styles.bars}></div>
         <div id={styles.bar6} className={styles.bars}></div>
       </label>
-    </div>
+    </button>
   );
 };
 

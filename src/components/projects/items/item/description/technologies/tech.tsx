@@ -5,7 +5,7 @@ import { v4 } from "uuid";
 const getTech = (tech: string[]): ReactElement[] => {
   return tech.map((item) => (
     <p className={styles.techItem} key={v4()}>
-      <b className={styles.important}>{item}</b>
+      <b>{item}</b>
     </p>
   ));
 };

@@ -25,6 +25,10 @@
       z-index: 2;
 
       h1 {
+        pre {
+          margin: 0;
+        }
+        
         font-size: var(--main-font-size);
         font-family: "SuperMario";
       }
@@ -34,6 +38,8 @@
       color: var(--element-color);
 
       h1 {
+        cursor: pointer;
+
         &:hover {
           animation: anime 1s;
         }

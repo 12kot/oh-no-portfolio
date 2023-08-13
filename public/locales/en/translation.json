@@ -1,0 +1,59 @@
+{
+  "nikitosha": "Nikitosha",
+
+  "header": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contacts": "Contacts",
+    "language": "Language"
+  },
+
+  "main": {
+    "who's": "WHO'S",
+    "nikitosha": "NIKITOSHA ?"
+  },
+
+  "about": {
+    "header": "Front-End <b>React</b> Developer 👋",
+    "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+  },
+
+  "skills": {
+    "header": "<b>Nikitosha's</b> skills",
+    "text": "As a <b>Junior Front-End</b> Developer, Nikitasha has an <b>impressive</b> arsenal of skills in HTML, CSS, JavaScript, <b>React</b>, and SCSS. Nikitosha excels at <b>developing</b> and maintaining responsive <b>websites</b> that offer a smooth user experience. His expertise lies in crafting dynamic, engaging interfaces through <b>writing clean and optimized code</b> and utilizing cutting-edge development tools and techniques.",
+    "techStack": "<b>Tech Stack</b>"
+  },
+
+  "projects": {
+    "code": "Code",
+    "liveDemo": "Live Demo",
+
+    "shop": {
+      "header": "Online Shop",
+      "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+    },
+
+    "weather": {
+      "header": "Weather",
+      "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+    },
+
+    "documents": {
+      "header": "Documents",
+      "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+    }
+  },
+
+  "form": {
+    "header": "Contact Nikitosha",
+    "firstname": "Firstname",
+    "email": "Email",
+    "emailExample": "krutoi.email@gmail.com",
+    "telegram": "Telegram",
+    "telegramExample": "kod41",
+    "message": "Message",
+    "messageExample": "One day a brick fell on my head and then I realized that I wanted to be a programmer...",
+    "send": "Send"
+  }
+}
