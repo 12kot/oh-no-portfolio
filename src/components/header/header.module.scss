@@ -22,14 +22,6 @@
     display: flex;
     align-items: center;
     gap: var(--gap);
-    
-    .menuIcon {
-      padding: var(--pad-item-top) var(--pad-item-left);
-
-      @media screen and (min-width: 768px) {
-        display: none;
-      }
-    }
   }
 }
 

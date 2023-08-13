@@ -1,0 +1,68 @@
+.menuButton {
+  width: 60px;
+  padding: var(--pad-item-top) var(--pad-item-left);
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+
+  #checkbox2 {
+    display: none;
+  }
+  
+  .toggle2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition-duration: 0.5s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: var(--element-color);
+    border-radius: 6px;
+  }
+  
+  #bar5 {
+    transition-duration: 0.8s;
+  }
+  
+  #bar4,
+  #bar6 {
+    width: 80%;
+  }
+  
+  .active + .toggle2 .bars {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+  
+  .active + .toggle2 #bar5 {
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+  }
+  
+  .active + .toggle2 #bar4 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+  
+  .active + .toggle2 #bar6 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+  
+  .active + .toggle2 {
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+  }
+}

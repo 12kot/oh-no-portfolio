@@ -4,6 +4,7 @@ import dino from "../../img/png/dino.webp";
 import Navigation from "./nav/navigation";
 import LngButton from "./lngButton/lngButton";
 import MobileMenu from "./mobileMenu/mobileMenu";
+import MobileMenuButton from "./mobileMenuButton/mobileMenuButton";
 
 const Header = () => {
   const [bgActive, setBgActive] = useState<boolean>(false);
@@ -18,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <MobileMenu active={menuActive} />
+      <MobileMenu active={menuActive} setActive={setMenuActive} />
       <header className={`${styles.container} ${bgActive && styles.active}`}>
         <a href="#" className={styles.dino}>
           <img src={dino} alt="LOGO" height={"100%"}></img>
@@ -27,7 +28,7 @@ const Header = () => {
         <section className={styles.menu}>
           <Navigation />
           <LngButton />
-          <button className={styles.menuIcon} onClick={() => {setMenuActive((prev) => !prev)}}>M</button>
+          <MobileMenuButton isActive={menuActive} setMenuActive={setMenuActive}/>
         </section>
       </header>
     </>
