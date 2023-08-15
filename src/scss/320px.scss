@@ -1,0 +1,41 @@
+:root {
+  //милипиздрики
+  @media screen and (max-width: 320px) {
+    //COMMON
+    --font-size-head: 15px;
+    --font-size: 13px;
+
+    //MAIN
+    --main-font-size: 35px;
+    --main-line-height: 30px;
+
+    //ABOUT
+    --about-box-width: 95%;
+    --about-box-heigth: 90%;
+    --about-blob-size: 180px;
+    --about-box-gap: 30px;
+
+    //SKILLS
+    --skills-box-width: 95%;
+    --skills-box-heigth: 90%;
+    --skills-img-size: 180px;
+
+    //CONTACTS
+    --contacts-form-height: 60%;
+    --contacts-form-width: 275px;
+    --contacts-form-min-height: 500px;
+
+    //PARTICLES
+    --corner-particles-img-heigth: 75px;
+    --corner-particles-rigth: -15px;
+    --corner-particles-top: -15px;
+
+    //BANNER
+    --banner-heigth: 300px;
+
+    --banner-font-size: 50px;
+    --banner-line-height: 41px;
+
+    --banner-dino-heigth: 45%;
+  }
+}

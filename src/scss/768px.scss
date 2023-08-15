@@ -1,0 +1,50 @@
+:root {
+  //огромные телефоны
+  @media screen and (max-width: 768px) {
+    //COMMON
+    --font-size-head: 25px;
+    --font-size: 15px;
+
+    //MAIN
+    --main-font-size: 60px;
+    --main-line-height: 50px;
+
+    //ABOUT
+    --about-box-width: 95%;
+    --about-box-heigth: 90%;
+    --about-blob-size: 200px;
+    --about-box-gap: 50px;
+
+    //SKILLS
+    --skills-box-width: 95%;
+    --skills-box-heigth: 90%;
+    --skills-img-size: 200px;
+
+    //PROJECTS
+    --projects-items-width: 430px;
+    --projects-item-heigth: 600px;
+    --projects-img-width: 390px;
+    --projects-img-heigth: 250px;
+    --projects-description-pad-left: 40px;
+    --projects-items-gap: 48px;
+    --projects-content-gap: 16px;
+
+    //CONTACTS
+    --contacts-form-height: 70%;
+    --contacts-form-min-height: 550px;
+    --contacts-form-width: 400px;
+
+    //PARTICLES
+    --corner-particles-img-heigth: 150px;
+    --corner-particles-rigth: -35px;
+    --corner-particles-top: -25px;
+
+    //BANNER
+    --banner-heigth: 300px;
+
+    --banner-font-size: 70px;
+    --banner-line-height: 55px;
+
+    --banner-dino-heigth: 55%;
+  }
+}

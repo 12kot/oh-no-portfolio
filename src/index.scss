@@ -1,4 +1,9 @@
 @import "scss/variables.scss";
+@import "scss/1280px.scss";
+@import "scss/1024px.scss";
+@import "scss/768px.scss";
+@import "scss/480px.scss";
+@import "scss/320px.scss";
 
 @font-face {
   font-family: "BebasNeue";
@@ -97,6 +102,7 @@ button {
 
 ::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {

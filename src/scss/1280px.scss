@@ -1,0 +1,45 @@
+:root {
+  //нетбуки
+  @media screen and (max-width: 1280px) {
+    //COMMON
+    --font-size-head: 36px;
+    --font-size: 17px;
+
+    //MAIN
+    --main-font-size: 120px;
+    --main-line-height: 100px;
+
+    //ABOUT
+    --about-box-width: 650px;
+    --about-box-heigth: 190px;
+    --about-blob-size: 190px;
+    --about-box-gap: 70px;
+
+    //SKILLS
+    --skills-box-width: 800px;
+    --skills-box-heigth: 225px;
+    --skills-img-size: 225px;
+    --skills-box-gap: 10px;
+
+    //PROJECTS
+    --projects-items-width: 900px;
+    --projects-img-width: 460px;
+
+    //CONTACTS
+    --contacts-form-height: 75%;
+    --contacts-form-min-height: 550px;
+
+    //PARTICLES
+    --corner-particles-img-heigth: 200px;
+    --corner-particles-rigth: -50px;
+    --corner-particles-top: -35px;
+
+    //BANNER
+    --banner-heigth: 300px;
+
+    --banner-font-size: 85px;
+    --banner-line-height: 65px;
+
+    --banner-dino-heigth: 55%;
+  }
+}
