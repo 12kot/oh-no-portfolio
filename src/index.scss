@@ -64,7 +64,8 @@ a {
   outline: none;
   text-decoration: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: var(--focus-color);
     //opacity: 0.7;
   }
@@ -87,8 +88,18 @@ button {
   border: none;
   background-color: var(--element-color);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: var(--element-focus);
     //opacity: 0.7;
   }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--element-color);
 }
