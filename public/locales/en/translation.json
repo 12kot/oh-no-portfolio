@@ -31,17 +31,17 @@
 
     "shop": {
       "header": "Online Shop",
-      "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+      "text": "An online store is a convenient way to buy food and other everyday goods. The service provides an interface for searching, ordering products, as well as a personal account with the implementation of the basket, favorites and information about orders."
     },
 
     "weather": {
       "header": "Weather",
-      "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+      "text": "Weather is an application that provides information about the weather in your region. Implemented the functionality of searching for cities, viewing detailed information. There is a functionality for changing the application theme and language."
     },
 
     "documents": {
       "header": "Documents",
-      "text": "Hi! <b>Nikitosha</b> is a passionate Front-End React Developer based in Grodno, Belarus. 🌍"
+      "text": "Document Sharing is an application that allows users to share files. Implemented a personal account, the functions of downloading, deleting files. In addition, it is possible to share files and create folders."
     }
   },
 
