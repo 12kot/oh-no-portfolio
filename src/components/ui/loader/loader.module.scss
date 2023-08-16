@@ -1,18 +1,18 @@
 .loader {
-  border-radius: 50%;
-  border: 2px solid var(--element-color);
-  border-left-color: transparent;
-  width: 16px;
-  height: 16px;
-  animation: spin89345 1s linear infinite;
-}
-
-@keyframes spin89345 {
-  0% {
-    transform: rotate(0deg);
+    border-radius: 50%;
+    border: 2px solid var(--element-color);
+    border-left-color: transparent;
+    width: 16px;
+    height: 16px;
+    animation: spin89345 1s linear infinite;
   }
-
-  100% {
-    transform: rotate(360deg);
+  
+  @keyframes spin89345 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
   }
-}
