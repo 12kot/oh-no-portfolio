@@ -12,7 +12,14 @@ const Header = (): ReactElement => {
 
   useEffect(() => {
     window.addEventListener("scroll", function () {
-      if (window.scrollY >= 65) setBgActive(true);
+      if (
+        window.scrollY >= 65 &&
+        !(
+          window.scrollY >=
+          document.documentElement.scrollHeight - window.innerHeight * 1.05
+        )
+      )
+        setBgActive(true);
       else setBgActive(false);
     });
   }, []);

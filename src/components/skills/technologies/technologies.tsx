@@ -25,8 +25,8 @@ const animSettings = GetAnimationSettings({
 
 const getTech = (): ReactElement[] => {
   return tech.map((Icon, index) => (
-    <motion.span custom={4 + index / 2} variants={animSettings}>
-      <Icon key={v4()} />
+    <motion.span custom={4 + index / 2} variants={animSettings} key={v4()}>
+      <Icon />
     </motion.span>
   ));
 };
