@@ -23,7 +23,7 @@ const Main = () => {
       <motion.main
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.6 }}
+        viewport={{ amount: 0.50 }}
         className={styles.main}
         id="#"
       >

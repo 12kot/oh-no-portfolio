@@ -5,6 +5,8 @@ import Blob from "./blob/blob";
 import LinkedInSVG from "img/svg/linkedIn";
 import TelegramSVG from "img/svg/telegram";
 import { Trans, useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { GetAnimationSettings } from "components/animation/animation";
 
 const medias: { link: string; svg: () => ReactElement }[] = [
   {
@@ -34,20 +36,33 @@ const getMedias = (): ReactElement[] =>
     </a>
   ));
 
+const animSettings = GetAnimationSettings({
+  y: {
+    from: 10,
+    to: 0,
+  },
+  duration: 0.2,
+});
+
 const Description = () => {
   const { t } = useTranslation();
 
   return (
     <article className={styles.container}>
-      <section className={styles.info}>
-        <h2 className={styles.header}>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.4 }}
+        className={styles.info}
+      >
+        <motion.h2 custom={1} variants={animSettings} className={styles.header}>
           <Trans i18nKey="about.header" t={t} components={{ b: <b></b> }} />
-        </h2>
-        <p>
+        </motion.h2>
+        <motion.p custom={1.3} variants={animSettings}>
           <Trans i18nKey="about.text" t={t} components={{ b: <b></b> }} />
-        </p>
-        <div className={styles.contacts}>{getMedias()}</div>
-      </section>
+        </motion.p>
+        <motion.div custom={1.8} variants={animSettings} className={styles.contacts}>{getMedias()}</motion.div>
+      </motion.section>
       <Blob />
     </article>
   );
