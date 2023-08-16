@@ -2,27 +2,16 @@ import React, { ReactElement } from "react";
 import styles from "./main.module.scss";
 import Particles from "../particles/aLotOfParticles/particles";
 
-//import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Scrolldown from "img/svg/scrolldown/scrolldown";
 import { v4 } from "uuid";
 import { useTranslation } from "react-i18next";
-
-//const delay = 0.1;
-
-// const listVariant = {
-//   visible: (i: number) => ({
-//     opacity: 1,
-//     transition: {
-//       delay: i * delay,
-//     },
-//   }),
-//   hidden: {
-//     opacity: 0,
-//   },
-// };
+import { GetAnimationSettings } from "components/animation/animation";
 
 const getText = (text: string): ReactElement[] => {
-  return text.split("").map((char, i) => <h1 key={v4()}>{char === " " ? <pre> </pre> : char}</h1>);
+  return text
+    .split("")
+    .map((char, i) => <h1 key={v4()}>{char === " " ? <pre> </pre> : char}</h1>);
 };
 
 const Main = () => {
@@ -31,16 +20,44 @@ const Main = () => {
   return (
     <>
       <Particles count={20} />
-      <main className={styles.main} id="#">
+      <motion.main
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.6 }}
+        className={styles.main}
+        id="#"
+      >
         <section className={styles.text}>
-          <div className={styles.item}>{getText(t("main.who's"))}</div>
-          <div className={`${styles.name} ${styles.item}`}>
+          <motion.span
+            custom={1}
+            variants={GetAnimationSettings({
+              x: {
+                from: -60,
+                to: 0,
+              },
+              duration: 0.3,
+            })}
+            className={styles.item}
+          >
+            {getText(t("main.who's"))}
+          </motion.span>
+          <motion.span
+            custom={2}
+            variants={GetAnimationSettings({
+              x: {
+                from: 60,
+                to: 0,
+              },
+              duration: 0.3,
+            })}
+            className={`${styles.name} ${styles.item}`}
+          >
             {getText(t("main.nikitosha"))}
-          </div>
+          </motion.span>
         </section>
 
         <Scrolldown path="#about" />
-      </main>
+      </motion.main>
     </>
   );
 };

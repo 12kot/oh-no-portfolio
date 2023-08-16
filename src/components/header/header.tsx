@@ -6,7 +6,7 @@ import LngButton from "./lngButton/lngButton";
 import MobileMenu from "./mobileMenu/mobileMenu";
 import MobileMenuButton from "./mobileMenuButton/mobileMenuButton";
 
-const Header = () => {
+const Header = (): ReactElement => {
   const [bgActive, setBgActive] = useState<boolean>(false);
   const [menuActive, setMenuActive] = useState<boolean>(false);
 
