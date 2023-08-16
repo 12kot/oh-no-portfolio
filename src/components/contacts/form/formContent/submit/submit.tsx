@@ -4,9 +4,16 @@ import Loader from "components/ui/loader/loader";
 import { useAppDispatch, useAppSelector } from "hooks/hooks";
 import { setSendStatus } from "store/slices/appSlice";
 
+import { motion } from "framer-motion";
+import { GetAnimationSettings } from "components/animation/animation";
+
+const animSettings = GetAnimationSettings({
+  duration: 0.5,
+});
+
 interface Props {
   value: string;
-  disabled: boolean
+  disabled: boolean;
 }
 
 const Submit = (props: Props): ReactElement => {
@@ -31,7 +38,9 @@ const Submit = (props: Props): ReactElement => {
   };
 
   return (
-    <button
+    <motion.button
+      custom={3}
+      variants={animSettings}
       className={`${styles.submit} ${isLoading && styles.loading} ${
         sendMailStatus === "SUCCESS" && styles.success
       } ${sendMailStatus === "ERROR" && styles.error}`}
@@ -39,7 +48,7 @@ const Submit = (props: Props): ReactElement => {
       disabled={isLoading || !!sendMailStatus || props.disabled}
     >
       {getText()}
-    </button>
+    </motion.button>
   );
 };
 

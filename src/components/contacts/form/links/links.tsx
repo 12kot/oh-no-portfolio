@@ -1,10 +1,19 @@
 import React, { ReactElement } from "react";
 import styles from "./links.module.scss";
+
+import { v4 } from "uuid";
+
 import GithubSVG from "img/svg/github";
 import LinkedInSVG from "img/svg/linkedIn";
 import TelegramSVG from "img/svg/telegram";
-import { v4 } from "uuid";
 import EmailSVG from "img/svg/email";
+
+import { motion } from "framer-motion";
+import { GetAnimationSettings } from "components/animation/animation";
+
+const animSettings = GetAnimationSettings({
+  duration: 0.5,
+});
 
 const links: { img: () => ReactElement; link: string }[] = [
   {
@@ -26,8 +35,10 @@ const links: { img: () => ReactElement; link: string }[] = [
 ];
 
 export const getLinks = () => {
-  return links.map((link) => (
-    <a
+  return links.map((link, index) => (
+    <motion.a
+      custom={4 + index/2}
+      variants={animSettings}
       className={styles.link}
       href={link.link}
       target="_blank"
@@ -35,12 +46,21 @@ export const getLinks = () => {
       rel="noreferrer"
     >
       <link.img />
-    </a>
+    </motion.a>
   ));
 };
 
 const Links = (): ReactElement => {
-  return <footer className={styles.links}>{getLinks()}</footer>;
+  return (
+    <motion.footer
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1 }}
+      className={styles.links}
+    >
+      {getLinks()}
+    </motion.footer>
+  );
 };
 
 export default Links;

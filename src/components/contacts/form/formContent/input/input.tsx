@@ -1,6 +1,13 @@
 import React, { ReactElement } from "react";
 import styles from "./input.module.scss";
 
+import { motion } from "framer-motion";
+import { GetAnimationSettings } from "components/animation/animation";
+
+const animSettings = GetAnimationSettings({
+  duration: 0.5,
+});
+
 interface Props {
   label: string;
   placeholder: string;
@@ -37,7 +44,12 @@ const getInput = (
 
 const Input = (props: Props): ReactElement => {
   return (
-    <label className={`${styles.input}`} htmlFor="">
+    <motion.label
+      custom={2}
+      variants={animSettings}
+      className={`${styles.input}`}
+      htmlFor=""
+    >
       <p>
         {props.label} {props.required && <b>*</b>}
       </p>
@@ -47,7 +59,7 @@ const Input = (props: Props): ReactElement => {
         props.invalid,
         props.register
       )}
-    </label>
+    </motion.label>
   );
 };
 

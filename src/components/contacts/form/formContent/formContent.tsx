@@ -8,9 +8,11 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { formType } from "types/types";
 import { useTranslation } from "react-i18next";
 
+import { motion } from "framer-motion";
+
 const FormContent = (): ReactElement => {
   const { t } = useTranslation();
-  
+
   const dispatch = useAppDispatch();
 
   const {
@@ -26,7 +28,14 @@ const FormContent = (): ReactElement => {
   };
 
   return (
-    <form className={styles.form} action="" onSubmit={handleSubmit(onSubmit)}>
+    <motion.form
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3 }}
+      className={styles.form}
+      action=""
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Input
         label={t(`form.firstname`)}
         placeholder={t(`nikitosha`)}
@@ -72,7 +81,7 @@ const FormContent = (): ReactElement => {
       />
 
       <Submit value={t(`form.send`)} disabled={!isValid} />
-    </form>
+    </motion.form>
   );
 };
 
