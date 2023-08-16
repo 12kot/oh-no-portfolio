@@ -8,12 +8,25 @@ import GithubSVG from "img/svg/github";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 
+import { motion } from "framer-motion";
+import { GetAnimationSettings } from "components/animation/animation";
+
+const animSettings = GetAnimationSettings({
+  y: {
+    from: 50,
+    to: 0,
+  },
+  duration: 0.4,
+});
+
 const getLinks = (
   links: linkType[],
   t: TFunction<"translation", undefined>
 ): ReactElement[] => {
-  return links.map((item) => (
-    <a
+  return links.map((item, index) => (
+    <motion.a
+      custom={4 + index / 2}
+      variants={animSettings}
       className={styles.link}
       href={item.link}
       target="_blank"
@@ -22,7 +35,7 @@ const getLinks = (
     >
       <p>{t(`projects.${item.desc}`)}</p>
       {item.image === "github" ? <GithubSVG /> : <OpenPageSVG />}
-    </a>
+    </motion.a>
   ));
 };
 
