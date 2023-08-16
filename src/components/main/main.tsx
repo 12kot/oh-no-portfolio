@@ -23,7 +23,7 @@ const Main = () => {
       <motion.main
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.50 }}
+        viewport={{ amount: 0.5 }}
         className={styles.main}
         id="#"
       >
@@ -31,10 +31,6 @@ const Main = () => {
           <motion.span
             custom={1}
             variants={GetAnimationSettings({
-              x: {
-                from: -60,
-                to: 0,
-              },
               duration: 0.3,
             })}
             className={styles.item}
@@ -44,10 +40,6 @@ const Main = () => {
           <motion.span
             custom={2}
             variants={GetAnimationSettings({
-              x: {
-                from: 60,
-                to: 0,
-              },
               duration: 0.3,
             })}
             className={`${styles.name} ${styles.item}`}
