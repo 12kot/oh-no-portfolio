@@ -8,6 +8,14 @@ import { Trans, useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";
 
+const animSettings = GetAnimationSettings({
+  y: {
+    from: 50,
+    to: 0,
+  },
+  duration: 0.4,
+});
+
 const medias: { link: string; svg: () => ReactElement }[] = [
   {
     link: "https://www.t.me/kod41",
@@ -25,7 +33,9 @@ const medias: { link: string; svg: () => ReactElement }[] = [
 
 const getMedias = (): ReactElement[] =>
   medias.map((media, i) => (
-    <a
+    <motion.a
+      custom={2 + i}
+      variants={animSettings}
       className={styles.item}
       href={media.link}
       target="_blank"
@@ -33,16 +43,8 @@ const getMedias = (): ReactElement[] =>
       key={i}
     >
       {media.svg()}
-    </a>
+    </motion.a>
   ));
-
-const animSettings = GetAnimationSettings({
-  y: {
-    from: 10,
-    to: 0,
-  },
-  duration: 0.2,
-});
 
 const Description = () => {
   const { t } = useTranslation();
@@ -58,10 +60,10 @@ const Description = () => {
         <motion.h2 custom={1} variants={animSettings} className={styles.header}>
           <Trans i18nKey="about.header" t={t} components={{ b: <b></b> }} />
         </motion.h2>
-        <motion.p custom={1.3} variants={animSettings}>
+        <motion.p custom={2} variants={animSettings}>
           <Trans i18nKey="about.text" t={t} components={{ b: <b></b> }} />
         </motion.p>
-        <motion.div custom={1.8} variants={animSettings} className={styles.contacts}>{getMedias()}</motion.div>
+        <motion.div className={styles.contacts}>{getMedias()}</motion.div>
       </motion.section>
       <Blob />
     </article>
