@@ -1,31 +1,24 @@
 import React, { ReactElement } from "react";
+
 import styles from "./formContent.module.scss";
 import Input from "./input/input";
 import Submit from "./submit/submit";
-import { sendMail } from "store/slices/appSlice";
-import { useAppDispatch } from "hooks/hooks";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { formType } from "types/types";
+
 import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";
+import withForm from "hoc/withForm";
 
-const FormContent = (): ReactElement => {
+import { formType } from "types/types";
+
+const FormContent = ({
+  register,
+  isValid,
+  handleSubmit,
+  onSubmit,
+  errors
+}: formType): ReactElement => {
   const { t } = useTranslation();
-
-  const dispatch = useAppDispatch();
-
-  const {
-    register,
-    formState: { errors, isValid },
-    handleSubmit,
-    reset,
-  } = useForm<formType>({ mode: "onChange" });
-
-  const onSubmit: SubmitHandler<formType> = (data) => {
-    dispatch(sendMail(data));
-    reset();
-  };
 
   return (
     <motion.form
@@ -85,4 +78,4 @@ const FormContent = (): ReactElement => {
   );
 };
 
-export default FormContent;
+export default withForm(FormContent);

@@ -1,9 +1,11 @@
 import React, { ReactElement } from "react";
 import styles from "./description.module.scss";
+
 import GithubSVG from "img/svg/github";
 import Blob from "./blob/blob";
 import LinkedInSVG from "img/svg/linkedIn";
 import TelegramSVG from "img/svg/telegram";
+
 import { Trans, useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";

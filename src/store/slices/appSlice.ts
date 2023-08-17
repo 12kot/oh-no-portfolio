@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { formType } from "types/types";
+import { formFieldsType } from "types/types";
 
 interface appType {
   sendMailLoading: boolean;
@@ -12,7 +12,7 @@ const initialState: appType = {
   sendMailStatus: null,
 };
 
-export const sendMail = createAsyncThunk<void, formType>(
+export const sendMail = createAsyncThunk<void, formFieldsType>(
   "app/sendMail",
   async (props, { rejectWithValue }) => {
     const message =
