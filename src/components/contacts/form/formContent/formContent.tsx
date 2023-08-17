@@ -4,7 +4,6 @@ import styles from "./formContent.module.scss";
 import Input from "./input/input";
 import Submit from "./submit/submit";
 
-import { motion } from "framer-motion";
 import withForm from "hoc/withForm";
 
 import { formType, getTextType } from "types/types";
@@ -21,10 +20,7 @@ const FormContent = ({
   getText,
 }: Props): ReactElement => {
   return (
-    <motion.form
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.3 }}
+    <form
       className={styles.form}
       action=""
       onSubmit={handleSubmit(onSubmit)}
@@ -74,7 +70,7 @@ const FormContent = ({
       />
 
       <Submit value={getText(`form.send`)} disabled={!isValid} />
-    </motion.form>
+    </form>
   );
 };
 
