@@ -9,6 +9,7 @@ type Props = {
 const MobileMenuButton = ({ isActive, setMenuActive }: Props): ReactElement => {
   return (
     <button
+      aria-label="menu"
       className={styles.menuButton}
       onClick={() => {
         setMenuActive((prev) => !prev);
