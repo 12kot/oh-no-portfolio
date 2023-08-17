@@ -1,11 +1,13 @@
+import { motion } from "framer-motion";
 import React from "react";
 
-const TsSVG = () => {
+const TsSVG = React.forwardRef<SVGSVGElement>((_, ref) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
       id="typescript"
+      ref={ref}
     >
       <path
         fill="#007acc"
@@ -13,6 +15,7 @@ const TsSVG = () => {
       ></path>
     </svg>
   );
-};
+});
 
 export default TsSVG;
+export const MTsSVG = motion(TsSVG);

@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import React from "react";
 
-const HtmlSVG = () => {
+const HtmlSVG = React.forwardRef<SVGSVGElement>((_, ref) => {
   return (
     <svg
       enableBackground="new 0 0 32 32"
@@ -12,6 +13,7 @@ const HtmlSVG = () => {
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      ref={ref}
     >
       <g>
         <polygon
@@ -35,6 +37,7 @@ const HtmlSVG = () => {
       <g />
     </svg>
   );
-};
+});
 
 export default HtmlSVG;
+export const MHtmlSVG = motion(HtmlSVG);

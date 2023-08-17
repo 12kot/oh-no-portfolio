@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import React from "react";
 
-const JsSVG = () => {
+const JsSVG = React.forwardRef<SVGSVGElement>((_, ref) => {
   return (
     <svg
       height="512px"
@@ -10,6 +11,7 @@ const JsSVG = () => {
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      ref={ref}
     >
       <g id="_x31_87-js">
         <g>
@@ -33,6 +35,7 @@ const JsSVG = () => {
       <g id="Layer_1" />
     </svg>
   );
-};
+});
 
 export default JsSVG;
+export const MJsSVG = motion(JsSVG);

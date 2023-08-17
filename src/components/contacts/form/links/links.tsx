@@ -35,10 +35,8 @@ const links: { img: () => ReactElement; link: string }[] = [
 ];
 
 export const getLinks = () => {
-  return links.map((link, index) => (
-    <motion.a
-      custom={4 + index/2}
-      variants={animSettings}
+  return links.map((link) => (
+    <a
       className={styles.link}
       href={link.link}
       target="_blank"
@@ -46,7 +44,7 @@ export const getLinks = () => {
       rel="noreferrer"
     >
       <link.img />
-    </motion.a>
+    </a>
   ));
 };
 
@@ -56,9 +54,11 @@ const Links = (): ReactElement => {
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.1 }}
-      className={styles.links}
+      className={styles.linksContainer}
     >
-      {getLinks()}
+      <motion.div custom={4} variants={animSettings} className={styles.links}>
+        {getLinks()}
+      </motion.div>
     </motion.footer>
   );
 };

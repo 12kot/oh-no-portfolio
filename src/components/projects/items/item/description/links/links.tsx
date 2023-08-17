@@ -22,10 +22,8 @@ const getLinks = (
   links: linkType[],
   getText: (path: string) => string
 ): ReactElement[] => {
-  return links.map((item, index) => (
-    <motion.a
-      custom={4 + index / 2}
-      variants={animSettings}
+  return links.map((item) => (
+    <a
       className={styles.link}
       href={item.link}
       target="_blank"
@@ -34,7 +32,7 @@ const getLinks = (
     >
       <p>{getText(`projects.${item.desc}`)}</p>
       {item.image === "github" ? <GithubSVG /> : <OpenPageSVG />}
-    </motion.a>
+    </a>
   ));
 };
 
@@ -43,7 +41,11 @@ interface Props extends getTextType {
 }
 
 const Links = ({ links, getText }: Props): ReactElement => {
-  return <span className={styles.links}>{getLinks(links, getText)}</span>;
+  return (
+    <motion.span custom={4} variants={animSettings} className={styles.links}>
+      {getLinks(links, getText)}
+    </motion.span>
+  );
 };
 
 export default withText(Links);

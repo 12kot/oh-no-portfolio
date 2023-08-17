@@ -25,27 +25,20 @@ const animSettings = GetAnimationSettings({
 });
 
 const getTech = (): ReactElement[] => {
-  return tech.map((Icon, index) => (
-    <motion.span custom={4 + index / 2} variants={animSettings} key={v4()}>
-      <Icon />
-    </motion.span>
+  return tech.map((Icon) => (
+    <Icon key={v4()} />
   ));
 };
 
 const Technologies = ({ getTextComponent }: getTextType): ReactElement => {
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.4 }}
-      className={styles.technologies}
-    >
+    <section className={styles.technologies}>
       <motion.p custom={3} variants={animSettings}>
         {getTextComponent("skills.techStack")}
       </motion.p>
       <motion.hr custom={3} variants={animSettings} />
-      <motion.span className={styles.icons}>{getTech()}</motion.span>
-    </motion.section>
+      <motion.span custom={4} variants={animSettings} className={styles.icons}>{getTech()}</motion.span>
+    </section>
   );
 };
 

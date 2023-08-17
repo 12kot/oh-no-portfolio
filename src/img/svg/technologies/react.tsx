@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import React from "react";
 
-const ReactSVG = () => {
+const ReactSVG = React.forwardRef<SVGSVGElement>((_, ref) => {
   return (
     <svg
       id="Layer_2"
@@ -9,6 +10,7 @@ const ReactSVG = () => {
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      ref={ref}
     >
       <style type="text/css"></style>
       <circle style={{ fill: "#00D8FF" }} cx="299.5" cy="299.6" r="50.2" />
@@ -32,6 +34,7 @@ const ReactSVG = () => {
       </g>
     </svg>
   );
-};
+});
 
 export default ReactSVG;
+export const MReactSVG = motion(ReactSVG);

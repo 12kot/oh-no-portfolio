@@ -16,12 +16,7 @@ const animSettings = GetAnimationSettings({
 
 const Description = ({ getTextComponent }: getTextType): ReactElement => {
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.4 }}
-      className={styles.box}
-    >
+    <section className={styles.box}>
       <motion.img
         custom={1}
         variants={animSettings}
@@ -37,7 +32,7 @@ const Description = ({ getTextComponent }: getTextType): ReactElement => {
           {getTextComponent("skills.text")}
         </motion.p>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

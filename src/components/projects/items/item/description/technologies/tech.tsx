@@ -14,20 +14,19 @@ const animSettings = GetAnimationSettings({
 });
 
 const getTech = (tech: string[]): ReactElement[] => {
-  return tech.map((item, index) => (
-    <motion.p
-      custom={3 + index / 2}
-      variants={animSettings}
-      className={styles.techItem}
-      key={v4()}
-    >
+  return tech.map((item) => (
+    <p className={styles.techItem} key={v4()}>
       <b>{item}</b>
-    </motion.p>
+    </p>
   ));
 };
 
 const Tech = ({ tech }: { tech: string[] }): ReactElement => {
-  return <span className={styles.tech}>{getTech(tech)}</span>;
+  return (
+    <motion.span custom={3} variants={animSettings} className={styles.tech}>
+      {getTech(tech)}
+    </motion.span>
+  );
 };
 
 export default Tech;
