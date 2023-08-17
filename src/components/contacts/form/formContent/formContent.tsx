@@ -4,22 +4,22 @@ import styles from "./formContent.module.scss";
 import Input from "./input/input";
 import Submit from "./submit/submit";
 
-import { useTranslation } from "react-i18next";
-
 import { motion } from "framer-motion";
 import withForm from "hoc/withForm";
 
-import { formType } from "types/types";
+import { formType, getTextType } from "types/types";
+import withText from "hoc/withText";
+
+interface Props extends formType, getTextType {}
 
 const FormContent = ({
   register,
   isValid,
   handleSubmit,
   onSubmit,
-  errors
-}: formType): ReactElement => {
-  const { t } = useTranslation();
-
+  errors,
+  getText,
+}: Props): ReactElement => {
   return (
     <motion.form
       initial="hidden"
@@ -30,8 +30,8 @@ const FormContent = ({
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input
-        label={t(`form.firstname`)}
-        placeholder={t(`nikitosha`)}
+        label={getText(`form.firstname`)}
+        placeholder={getText(`nikitosha`)}
         required={true}
         invalid={!!errors?.firstName}
         register={register("firstName", {
@@ -41,8 +41,8 @@ const FormContent = ({
 
       <div className={styles.rowInput}>
         <Input
-          label={t(`form.email`)}
-          placeholder={t(`form.emailExample`)}
+          label={getText(`form.email`)}
+          placeholder={getText(`form.emailExample`)}
           required={true}
           invalid={!!errors?.email}
           register={register("email", {
@@ -54,16 +54,16 @@ const FormContent = ({
           })}
         />
         <Input
-          label={t(`form.telegram`)}
-          placeholder={t(`form.telegramExample`)}
+          label={getText(`form.telegram`)}
+          placeholder={getText(`form.telegramExample`)}
           required={false}
           register={register("telegram")}
         />
       </div>
 
       <Input
-        label={t(`form.message`)}
-        placeholder={t(`form.messageExample`)}
+        label={getText(`form.message`)}
+        placeholder={getText(`form.messageExample`)}
         required={true}
         invalid={!!errors?.message}
         isTextarea={true}
@@ -73,9 +73,9 @@ const FormContent = ({
         })}
       />
 
-      <Submit value={t(`form.send`)} disabled={!isValid} />
+      <Submit value={getText(`form.send`)} disabled={!isValid} />
     </motion.form>
   );
 };
 
-export default withForm(FormContent);
+export default withText(withForm(FormContent));

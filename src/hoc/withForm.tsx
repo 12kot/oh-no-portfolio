@@ -1,14 +1,12 @@
-import React, { ReactElement } from "react";
+import React from "react";
 
 import { sendMail } from "store/slices/appSlice";
 import { useAppDispatch } from "hooks/hooks";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { formFieldsType, formType } from "types/types";
 
-const withForm = (
-  Component: (props: formType) => ReactElement
-) => {
-  return () => {
+const withForm = <T extends formType>(Component: React.ComponentType<T>) => {
+  return (props: any) => {
     const dispatch = useAppDispatch();
 
     const {
@@ -30,6 +28,7 @@ const withForm = (
         handleSubmit={handleSubmit}
         onSubmit={onSubmit}
         errors={errors}
+        {...props}
       />
     );
   };

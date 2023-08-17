@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import {
   FieldErrors,
   SubmitHandler,
@@ -32,4 +33,10 @@ export interface formType {
   handleSubmit: UseFormHandleSubmit<formFieldsType, undefined>;
   onSubmit: SubmitHandler<formFieldsType>;
   errors: FieldErrors<formFieldsType>;
-};
+}
+
+export interface getTextType {
+  setText: (lng: "en" | "ru" | "by") => void;
+  getText: (path: string) => string;
+  getTextComponent: (path: string) => ReactElement;
+}

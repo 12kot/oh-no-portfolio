@@ -6,9 +6,10 @@ import Blob from "./blob/blob";
 import LinkedInSVG from "img/svg/linkedIn";
 import TelegramSVG from "img/svg/telegram";
 
-import { Trans, useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";
+import { getTextType } from "types/types";
+import withText from "hoc/withText";
 
 const animSettings = GetAnimationSettings({
   y: {
@@ -48,9 +49,7 @@ const getMedias = (): ReactElement[] =>
     </motion.a>
   ));
 
-const Description = () => {
-  const { t } = useTranslation();
-
+const Description = ({ getTextComponent }: getTextType) => {
   return (
     <article className={styles.container}>
       <motion.section
@@ -60,10 +59,10 @@ const Description = () => {
         className={styles.info}
       >
         <motion.h2 custom={1} variants={animSettings} className={styles.header}>
-          <Trans i18nKey="about.header" t={t} components={{ b: <b></b> }} />
+          {getTextComponent("about.header")}
         </motion.h2>
         <motion.p custom={2} variants={animSettings}>
-          <Trans i18nKey="about.text" t={t} components={{ b: <b></b> }} />
+          {getTextComponent("about.text")}
         </motion.p>
         <motion.div className={styles.contacts}>{getMedias()}</motion.div>
       </motion.section>
@@ -72,4 +71,4 @@ const Description = () => {
   );
 };
 
-export default Description;
+export default withText(Description);

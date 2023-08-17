@@ -1,13 +1,13 @@
 import React, { ReactElement, useState } from "react";
 import styles from "./lngButton.module.scss";
-import { useTranslation } from "react-i18next";
+import { getTextType } from "types/types";
+import withText from "hoc/withText";
 
-const LngButton = (): ReactElement => {
+const LngButton = ({getText, setText}: getTextType): ReactElement => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  const { t, i18n } = useTranslation();
 
   const handleLng = (lng: "en" | "ru" | "by"): void => {
-    i18n.changeLanguage(lng);
+    setText(lng);
     setIsActive(false);
   };
 
@@ -17,7 +17,7 @@ const LngButton = (): ReactElement => {
         className={styles.button}
         onClick={() => setIsActive((prev) => !prev)}
       >
-        {t("header.language")}
+        {getText("header.language")}
       </button>
       <div className={`${styles.content} ${isActive && styles.active}`}>
         <button onClick={() => handleLng("ru")}>Русский</button>
@@ -27,4 +27,4 @@ const LngButton = (): ReactElement => {
   );
 };
 
-export default LngButton;
+export default withText(LngButton);

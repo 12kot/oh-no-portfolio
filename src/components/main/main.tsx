@@ -5,8 +5,9 @@ import Particles from "../particles/aLotOfParticles/particles";
 import { motion } from "framer-motion";
 import Scrolldown from "img/svg/scrolldown/scrolldown";
 import { v4 } from "uuid";
-import { useTranslation } from "react-i18next";
 import { GetAnimationSettings } from "components/animation/animation";
+import { getTextType } from "types/types";
+import withText from "hoc/withText";
 
 const getText = (text: string): ReactElement[] => {
   return text
@@ -14,9 +15,7 @@ const getText = (text: string): ReactElement[] => {
     .map((char, i) => <h1 key={v4()}>{char === " " ? <pre> </pre> : char}</h1>);
 };
 
-const Main = () => {
-  const { t } = useTranslation();
-
+const Main = ({getText: getTranslateText}: getTextType) => {
   return (
     <>
       <Particles count={20} />
@@ -35,7 +34,7 @@ const Main = () => {
             })}
             className={styles.item}
           >
-            {getText(t("main.who's"))}
+            {getText(getTranslateText("main.who's"))}
           </motion.span>
           <motion.span
             custom={2}
@@ -44,7 +43,7 @@ const Main = () => {
             })}
             className={`${styles.name} ${styles.item}`}
           >
-            {getText(t("main.nikitosha"))}
+            {getText(getTranslateText("main.nikitosha"))}
           </motion.span>
         </section>
 
@@ -54,4 +53,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default withText(Main);
