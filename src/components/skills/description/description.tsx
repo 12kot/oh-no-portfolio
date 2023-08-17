@@ -1,9 +1,10 @@
 import React, { ReactElement } from "react";
 import styles from "./description.module.scss";
 import omNom from "img/gif/omNomClick.gif";
-import { Trans, useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";
+import { getTextType } from "types/types";
+import withText from "hoc/withText";
 
 const animSettings = GetAnimationSettings({
   y: {
@@ -13,9 +14,7 @@ const animSettings = GetAnimationSettings({
   duration: 0.3,
 });
 
-const Description = (): ReactElement => {
-  const { t } = useTranslation();
-
+const Description = ({ getTextComponent }: getTextType): ReactElement => {
   return (
     <motion.section
       initial="hidden"
@@ -32,14 +31,14 @@ const Description = (): ReactElement => {
       />
       <div className={styles.description}>
         <motion.h2 custom={1} variants={animSettings} className={styles.header}>
-          <Trans i18nKey="skills.header" t={t} components={{ b: <b></b> }} />
+          {getTextComponent("skills.header")}
         </motion.h2>
         <motion.p custom={2} variants={animSettings}>
-          <Trans i18nKey="skills.text" t={t} components={{ b: <b></b> }} />
+          {getTextComponent("skills.text")}
         </motion.p>
       </div>
     </motion.section>
   );
 };
 
-export default Description;
+export default withText(Description);

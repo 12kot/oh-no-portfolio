@@ -1,12 +1,12 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Tech from "./technologies/tech";
 import Links from "./links/links";
-import { projectType } from "types/types";
+import { getTextType, projectType } from "types/types";
 import styles from "./description.module.scss";
-import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";
+import withText from "hoc/withText";
 
 const animSettings = GetAnimationSettings({
   y: {
@@ -16,24 +16,27 @@ const animSettings = GetAnimationSettings({
   duration: 0.4,
 });
 
-const Description = (props: { item: projectType; imgLeft: boolean }) => {
-  const { t } = useTranslation();
+interface Props extends getTextType {
+  item: projectType;
+  imgLeft: boolean;
+}
 
+const Description = ({ item, imgLeft, getText }: Props): ReactElement => {
   return (
-    <div className={`${styles.description} ${props.imgLeft && styles.left}`}>
+    <div className={`${styles.description} ${imgLeft && styles.left}`}>
       <motion.header custom={1} variants={animSettings}>
         <h3>
-          <b>{t(`projects.${props.item.name}.header`)}</b>
+          <b>{getText(`projects.${item.name}.header`)}</b>
         </h3>
       </motion.header>
 
       <motion.p custom={2} variants={animSettings}>
-        {t(`projects.${props.item.name}.text`)}
+        {getText(`projects.${item.name}.text`)}
       </motion.p>
-      <Tech tech={props.item.tech} />
-      <Links links={props.item.links} />
+      <Tech tech={item.tech} />
+      <Links links={item.links} />
     </div>
   );
 };
 
-export default Description;
+export default withText(Description);

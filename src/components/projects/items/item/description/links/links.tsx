@@ -1,15 +1,14 @@
 import React, { ReactElement } from "react";
 import styles from "./links.module.scss";
-import { linkType } from "types/types";
+import { getTextType, linkType } from "types/types";
 
 import { v4 } from "uuid";
 import OpenPageSVG from "img/svg/openPage";
 import GithubSVG from "img/svg/github";
-import { useTranslation } from "react-i18next";
-import { TFunction } from "i18next";
 
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";
+import withText from "hoc/withText";
 
 const animSettings = GetAnimationSettings({
   y: {
@@ -21,7 +20,7 @@ const animSettings = GetAnimationSettings({
 
 const getLinks = (
   links: linkType[],
-  t: TFunction<"translation", undefined>
+  getText: (path: string) => string
 ): ReactElement[] => {
   return links.map((item, index) => (
     <motion.a
@@ -33,16 +32,18 @@ const getLinks = (
       key={v4()}
       rel="noreferrer"
     >
-      <p>{t(`projects.${item.desc}`)}</p>
+      <p>{getText(`projects.${item.desc}`)}</p>
       {item.image === "github" ? <GithubSVG /> : <OpenPageSVG />}
     </motion.a>
   ));
 };
 
-const Links = ({ links }: { links: linkType[] }): ReactElement => {
-  const { t } = useTranslation();
+interface Props extends getTextType {
+  links: linkType[];
+}
 
-  return <span className={styles.links}>{getLinks(links, t)}</span>;
+const Links = ({ links, getText }: Props): ReactElement => {
+  return <span className={styles.links}>{getLinks(links, getText)}</span>;
 };
 
-export default Links;
+export default withText(Links);

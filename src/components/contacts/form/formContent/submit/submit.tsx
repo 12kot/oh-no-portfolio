@@ -29,7 +29,7 @@ const Submit = (props: Props): ReactElement => {
       }, 4000);
   }, [dispatch, sendMailStatus]);
 
-  const getText = (): ReactElement => {
+  const getStatus = (): ReactElement => {
     if (sendMailStatus === "SUCCESS") return <p>✔</p>;
     if (sendMailStatus === "ERROR") return <p>✖</p>;
     if (isLoading) return <Loader />;
@@ -47,7 +47,7 @@ const Submit = (props: Props): ReactElement => {
       type="submit"
       disabled={isLoading || !!sendMailStatus || props.disabled}
     >
-      {getText()}
+      {getStatus()}
     </motion.button>
   );
 };

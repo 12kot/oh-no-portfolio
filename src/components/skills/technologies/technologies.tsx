@@ -9,9 +9,10 @@ import ReactSVG from "img/svg/technologies/react";
 import TsSVG from "img/svg/technologies/ts";
 
 import { v4 } from "uuid";
-import { Trans, useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { GetAnimationSettings } from "components/animation/animation";
+import withText from "hoc/withText";
+import { getTextType } from "types/types";
 
 const tech = [HtmlSVG, CssSVG, SassSVG, JsSVG, TsSVG, ReactSVG];
 
@@ -31,9 +32,7 @@ const getTech = (): ReactElement[] => {
   ));
 };
 
-const Technologies = (): ReactElement => {
-  const { t } = useTranslation();
-
+const Technologies = ({ getTextComponent }: getTextType): ReactElement => {
   return (
     <motion.section
       initial="hidden"
@@ -42,7 +41,7 @@ const Technologies = (): ReactElement => {
       className={styles.technologies}
     >
       <motion.p custom={3} variants={animSettings}>
-        <Trans i18nKey="skills.techStack" t={t} components={{ b: <b></b> }} />
+        {getTextComponent("skills.techStack")}
       </motion.p>
       <motion.hr custom={3} variants={animSettings} />
       <motion.span className={styles.icons}>{getTech()}</motion.span>
@@ -50,4 +49,4 @@ const Technologies = (): ReactElement => {
   );
 };
 
-export default Technologies;
+export default withText(Technologies);
