@@ -21,7 +21,7 @@
 
   "skills": {
     "header": "<b>Nikitosha's</b> skills",
-    "text": "As a <b>Junior Front-End</b> Developer, Nikitasha has an <b>impressive</b> arsenal of skills in HTML, CSS, JavaScript, <b>React</b>, and SCSS. Nikitosha excels at <b>developing</b> and maintaining responsive <b>websites</b> that offer a smooth user experience. His expertise lies in crafting dynamic, engaging interfaces through <b>writing clean and optimized code</b> and utilizing cutting-edge development tools and techniques.",
+    "text": "As a Junior <b>Front-End</b> Developer, Nikitasha has an impressive arsenal of skills in HTML, CSS, JavaScript, <b>React</b>, and SCSS. Nikitosha excels at <b>developing</b> and maintaining responsive <b>websites</b> that offer a smooth user experience. His expertise lies in crafting dynamic, engaging interfaces through <b>writing clean and optimized code</b> and utilizing cutting-edge development tools and techniques.",
     "techStack": "<b>Tech Stack</b>"
   },
 

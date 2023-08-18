@@ -22,6 +22,7 @@ const LngButton = ({getText, setText}: getTextType): ReactElement => {
       <div className={`${styles.content} ${isActive && styles.active}`}>
         <button onClick={() => handleLng("ru")}>Русский</button>
         <button onClick={() => handleLng("en")}>English</button>
+        <button onClick={() => handleLng("by")}>Беларуская</button>
       </div>
     </div>
   );
