@@ -22,12 +22,16 @@ const getImage = (count: number): ReactElement[] => {
       alt="img"
       key={v4()}
       className={`${styles.particle}`}
+      height={"auto"}
+      width={"auto"}
     />
   ));
 };
 
-const Particles = (props: {count: number}) => {
-  return <div className={styles.particle_container}>{getImage(props.count)}</div>;
+const Particles = (props: { count: number }) => {
+  return (
+    <div className={styles.particle_container}>{getImage(props.count)}</div>
+  );
 };
 
 export default Particles;

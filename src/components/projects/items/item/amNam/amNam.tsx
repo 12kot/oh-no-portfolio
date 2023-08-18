@@ -14,7 +14,7 @@ const getAmNam = () => {
 const AmNam = ({ isLeft }: { isLeft: boolean }): ReactElement => {
   return (
     <div className={`${styles.container} ${!isLeft && styles.left}`}>
-      <img src={getAmNam()} alt=""></img>
+      <img src={getAmNam()} alt="" height={"auto"} width={"auto"}></img>
     </div>
   );
 };

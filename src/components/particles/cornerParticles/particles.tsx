@@ -7,9 +7,9 @@ import amNam2 from "img/png/amNam2.webp";
 const CornerParticles = () => {
   return (
     <div className={styles.container}>
-      <img src={dino} alt=""></img>
-      <img src={amNam1} alt=""></img>
-      <img src={amNam2} alt=""></img>
+      <img src={dino} alt="" height={"auto"} width={"auto"}></img>
+      <img src={amNam1} alt="" height={"auto"} width={"auto"}></img>
+      <img src={amNam2} alt="" height={"auto"} width={"auto"}></img>
     </div>
   );
 };

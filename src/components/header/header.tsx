@@ -29,7 +29,7 @@ const Header = (): ReactElement => {
       <MobileMenu active={menuActive} setActive={setMenuActive} />
       <header className={`${styles.container} ${bgActive && styles.active}`}>
         <a href="#" className={styles.dino}>
-          <img src={dino} alt="LOGO" height={"100%"}></img>
+          <img src={dino} alt="LOGO" height={"100%"} width={"auto"} />
         </a>
 
         <section className={styles.menu}>

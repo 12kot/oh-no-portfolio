@@ -21,9 +21,9 @@
 
   .particle:nth-child(#{$i}) {
     animation: particle-animation-#{$i} 60s infinite;
-    $size: random(40) + 20px;
     opacity: 0.1;
-    height: $size;
+    $size: random(40) + 20px;
+    height: $size!important;
     animation-delay: -$i * 0.2s;
 
     transform: translate3d(
