@@ -23,8 +23,18 @@ const getImage = (path: string[]): ReactElement => {
       variants={animSettings}
       className={`${styles.image}`}
     >
-      <img alt="img" src={require(`img/projects/${path[0]}`)}></img>
-      <img alt="img" src={require(`img/projects/${path[0]}`)}></img>
+      <img
+        alt="img"
+        src={require(`img/projects/${path[0]}`)}
+        width={100}
+        height={100}
+      />
+      <img
+        alt="img"
+        src={require(`img/projects/${path[0]}`)}
+        width={100}
+        height={100}
+      />
     </motion.div>
   );
 };

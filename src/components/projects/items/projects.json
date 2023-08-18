@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "image": ["eDelivery.png"],
+      "image": ["eDelivery.webp"],
       "name": "shop",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "image": ["weatherApp.png"],
+      "image": ["weatherApp.webp"],
       "name": "weather",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "image": ["docFlow.png"],
+      "image": ["docFlow.webp"],
       "name": "documents",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],

@@ -1,39 +1,8 @@
-// @function bg($deg) {
-//   @return linear-gradient(
-//     $deg,
-//     hsl(228deg 46% 17%) 0%,
-//     hsl(228deg 46% 17%) 4%,
-//     hsl(228deg 46% 18%) 9%,
-//     hsl(228deg 46% 18%) 14%,
-//     hsl(228deg 46% 19%) 19%,
-//     hsl(228deg 46% 19%) 24%,
-//     hsl(228deg 46% 20%) 29%,
-//     hsl(228deg 46% 20%) 35%,
-//     hsl(218deg 61% 20%) 41%,
-//     hsl(205deg 100% 19%) 48%,
-//     hsl(201deg 100% 21%) 57%,
-//     hsl(194deg 100% 22%) 68%,
-//     hsl(186deg 100% 21%) 101%,
-//     hsl(174deg 100% 21%) 101%,
-//     hsl(162deg 100% 23%) 102%,
-//     hsl(133deg 45% 34%) 102%,
-//     hsl(116deg 37% 40%) 101%,
-//     hsl(115deg 37% 43%) 101%,
-//     hsl(115deg 37% 47%) 101%,
-//     hsl(115deg 38% 50%) 101%,
-//     hsl(115deg 44% 54%) 101%,
-//     hsl(115deg 51% 57%) 100%,
-//     hsl(115deg 60% 61%) 100%,
-//     hsl(114deg 71% 65%) 100%
-//   );
-// }
-
 .isLeft {
   .image {
     order: 1;
   }
 
-  //background: bg(210deg) !important;
   box-shadow: 1px 1px 3px #141414 !important;
 }
 
@@ -46,7 +15,6 @@
   position: relative;
   overflow: hidden;
 
-  //background: bg(140deg);
   background-color: var(--bg-color);
   box-shadow: -1px 1px 3px #141414;
 
@@ -74,7 +42,8 @@
 
     img {
       object-fit: cover;
-      width: 100%;
+      width: 100%!important;
+      height: fit-content;
 
       transition: 5s ease-in-out;
     }

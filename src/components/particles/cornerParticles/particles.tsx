@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./particles.module.scss";
 import dino from "img/png/dino.webp";
-import amNam1 from "img/png/amNam1.png";
-import amNam2 from "img/png/amNam2.png";
+import amNam1 from "img/png/amNam1.webp";
+import amNam2 from "img/png/amNam2.webp";
 
 const CornerParticles = () => {
   return (
