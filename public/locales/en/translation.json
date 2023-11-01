@@ -29,6 +29,21 @@
     "code": "Code",
     "liveDemo": "Live Demo",
 
+    "wine": {
+      "header": "The Jewel",
+      "text": "The Jewel is a landing page for the producer of elite wine The Jewel. It is written in pure html, css, js. It has a beautiful and adaptive design that you can look at for hours."
+    },
+
+    "coins": {
+      "header": "Coins",
+      "text": "Coins - an application for viewing the current rate of the crypt, its history, with the ability to buy / sell coins with profit/loss calculation."
+    },
+
+    "locks": {
+      "header": "BelImportLocks",
+      "text": "BelImportLocks is an application for viewing current products in the company's warehouse. It has a beautiful and responsive design that you will definitely like."
+    },
+
     "shop": {
       "header": "Online Shop",
       "text": "An online store is a convenient way to buy food and other everyday goods. The service provides an interface for searching, ordering products, as well as a personal account with the implementation of the basket, favorites and information about orders."

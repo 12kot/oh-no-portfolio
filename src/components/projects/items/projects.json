@@ -1,19 +1,55 @@
 {
   "projects": [
     {
-      "image": ["eDelivery.webp"],
-      "name": "shop",
+      "image": ["locks.webp"],
+      "name": "locks",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["React", "Toolkit", "SCSS", "Firebase"],
+      "links": [
+        {
+          "desc": "code",
+          "link": "https://github.com/12kot/locks",
+          "image": "github"
+          },
+        {
+          "desc": "liveDemo",
+          "link": "https://xn--80acmfijjefoglo2a.xn--90ais/",
+          "image": "newpage"
+        }
+      ]
+    },
+    {
+      "image": ["coins.webp"],
+      "name": "coins",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
       "tech": ["React", "SCSS", "Firebase"],
       "links": [
         {
           "desc": "code",
-          "link": "https://github.com/12kot/eDelivery",
+          "link": "https://github.com/12kot/coinapp",
           "image": "github"
           },
         {
           "desc": "liveDemo",
-          "link": "https://edelivery-00.web.app/",
+          "link": "https://coins-tt.web.app/",
+          "image": "newpage"
+        }
+      ]
+    },
+    {
+      "image": ["jewelWine.webp"],
+      "name": "wine",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["HTML", "CSS", "JS"],
+      "links": [
+        {
+          "desc": "code",
+          "link": "https://github.com/12kot/theJewelWinery",
+          "image": "github"
+          },
+        {
+          "desc": "liveDemo",
+          "link": "https://jewelwine.web.app/",
           "image": "newpage"
         }
       ]
@@ -22,7 +58,7 @@
       "image": ["weatherApp.webp"],
       "name": "weather",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
-      "tech": ["React", "SCSS", "Firebase"],
+      "tech": ["React", "Toolkit", "SCSS", "Firebase"],
       "links": [
         {
           "desc": "code",
@@ -37,10 +73,28 @@
       ]
     },
     {
+      "image": ["eDelivery.webp"],
+      "name": "shop",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
+      "tech": ["React", "Toolkit", "SCSS", "Firebase"],
+      "links": [
+        {
+          "desc": "code",
+          "link": "https://github.com/12kot/eDelivery",
+          "image": "github"
+          },
+        {
+          "desc": "liveDemo",
+          "link": "https://edelivery-00.web.app/",
+          "image": "newpage"
+        }
+      ]
+    },
+    {
       "image": ["docFlow.webp"],
       "name": "documents",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ipsa obcaecati amet eos delectus temporibus veritatis totam, dolore odio! Eos.",
-      "tech": ["React", "SCSS", "Firebase"],
+      "tech": ["React", "Redux", "SCSS", "Firebase"],
       "links": [
         {
           "desc": "code",
