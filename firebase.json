@@ -6,6 +6,9 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "i18n": {
+      "root": "/locales"
+    }
   }
 }
