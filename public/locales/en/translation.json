@@ -44,14 +44,14 @@
       "text": "BelImportLocks is an application for viewing current products in the company's warehouse. It has a beautiful and responsive design that you will definitely like."
     },
 
-    "shop": {
-      "header": "Online Shop",
-      "text": "An online store is a convenient way to buy food and other everyday goods. The service provides an interface for searching, ordering products, as well as a personal account with the implementation of the basket, favorites and information about orders."
-    },
-
     "weather": {
       "header": "Weather",
       "text": "Weather is an application that provides information about the weather in your region. Implemented the functionality of searching for cities, viewing detailed information. There is a functionality for changing the application theme and language."
+    },
+    
+    "shop": {
+      "header": "Online Shop",
+      "text": "An online store is a convenient way to buy food and other everyday goods. The service provides an interface for searching, ordering products, as well as a personal account with the implementation of the basket, favorites and information about orders."
     },
 
     "documents": {
